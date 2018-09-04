@@ -1,0 +1,8 @@
+NOTES:
+
+- h1 is occasionally different. Some pages use "Rensselaer's", while others use "Rensselaer".
+- tabs highlights are frequently incorrect. They use the classes "tabon", "taboff", "bgtabon", "bgtaboff" to highlight.
+- Anything that isn't the main menu has a hyperlink to go back (could do without? after all there's a tab that takes you there...)
+- Code is practically the same until you reach "END OF twbkwbis.P_OpenDoc"
+- Occasionally, there are footer links. This isn't true for all pages, and the links differ between pages. However, looks like they're mostly the same per tab.
+- 
