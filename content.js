@@ -1,4 +1,4 @@
-if (document.title = "Rensselaer's Student Information System") {
+if (window.location.href == "https://sis.rpi.edu/") {
 	var sisMan = document.getElementsByTagName("img");
 	sisMan[0].remove();
 
