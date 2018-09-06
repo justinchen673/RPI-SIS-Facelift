@@ -79,6 +79,20 @@ if (window.location.href == "https://sis.rpi.edu/") {
 	loginButton.innerHTML = "LOGIN";
 	loginButton.style.float = "left";
 	loginButton.style.padding = "40px 50px 40px 50px";
+	loginButton.onclick = function() {
+		window.location.href = "https://sis.rpi.edu/rss/twbkwbis.P_WWWLogin";
+	}
+	loginButton.onmouseover = function() {
+		loginButton.style.backgroundColor = "#ffffff";
+		loginButton.style.border = "3px solid #990011";
+		loginButton.style.color = "#990011";
+	}
+	loginButton.onmouseout = function() {
+		loginButton.style.backgroundColor = "#990011";
+		loginButton.style.border = "3px solid #ffffff";
+		loginButton.style.color = "#ffffff";
+	}
+	//var css = 'button:hover{ background-color: #ffffff; border: 3px solid #990011; color: #990011 }';
 	leftHalfDiv.appendChild(loginButton);
 
 	// Create and set up references div
