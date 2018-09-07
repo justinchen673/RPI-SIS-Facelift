@@ -38,7 +38,7 @@ p {
 	border-top: 0px solid #000000 !important;
 }
 
-td a {
+.headerlinksdiv td a {
 	display:inline-block;
     width:100%;
 	color: #8e8e8e !important;
