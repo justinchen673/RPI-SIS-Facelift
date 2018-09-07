@@ -181,5 +181,19 @@ if (window.location.href == "https://sis.rpi.edu/") {
 	    tabon[1].classList.add('taboff');
 	    tabon[1].classList.remove('tabon');
 	}
+
+	// Dynamic top buttons, change colors upon hover
+	var taboff = document.getElementsByClassName("taboff");
+	for (var i = 0; i < taboff.length; i++) {
+		taboff[i].onmouseout = function() {
+			this.classList.add('taboff');
+			this.classList.remove('tabon');
+		}
+		taboff[i].onmouseover = function() {
+			this.classList.add('tabon');
+			this.classList.remove('taboff');
+		}
+	}
+	
 	
 }
