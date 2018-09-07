@@ -44,7 +44,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
 	var sisText = document.createElement("div");
 	sisText.innerHTML = "Rensselaer's Student Information System";
 	sisText.style.float = "right";
-	sisText.style.fontSize = "x-large";
+	sisText.style.fontSize = "30px";
 	sisText.style.color = "#ffffff";
 	//Insert all parts into the webpage
 	body.insertBefore(banner, body.childNodes[0]);
@@ -129,24 +129,57 @@ if (window.location.href == "https://sis.rpi.edu/") {
 		ul.appendChild(li);
 	}
 } else {
+	var body = document.body;
+	body.style.fontFamily = "Source Sans Pro, sans-serif";
 
 	// Unify the header across all the pages
 	var h1 = document.getElementsByTagName("h1");
-	h1[0].innerHTML = "Rensselaer's Student Information System";
+	h1[0].remove();
 
+	// Remove the paragraphs which cause white space
+	var paragraphs = document.getElementsByTagName("p");
+	paragraphs[0].remove();
+
+	// Remove all extra space between menu tabs
+	var menuBackgroundOn = document.getElementsByClassName("bgtabon");
+	var menuBackgroundOff = document.getElementsByClassName("bgtaboff");
+	for (var i = menuBackgroundOff.length - 1; i >= 0; i--) {
+		menuBackgroundOff[i].remove();
+	}
+	for (var i = menuBackgroundOn.length - 1; i >= 0; i--) {
+		menuBackgroundOn[i].remove();
+	}
+
+	// Create and set up the div that the logo and right text will be in
+	var headerDiv = document.createElement("div");
+	headerDiv.style.marginLeft = "auto";
+	headerDiv.style.marginRight = "auto";
+	headerDiv.style.width = "75%";
+	// Create the logo image and the link to rpi.edu
+	var logoImg = document.createElement("img");
+	logoImg.src = "https://www.rpi.edu/dept/cct/apps/web-branding/v2/header/meganav/img/RPIlogo_white.png";
+	var logoLink = document.createElement("a");
+	logoLink.href = "https://rpi.edu";
+	// Text on the right
+	var sisText = document.createElement("div");
+	sisText.innerHTML = "Rensselaer's Student Information System";
+	sisText.style.float = "right";
+	sisText.style.fontSize = "30px";
+	sisText.style.color = "#ffffff";
+
+	var banner = document.getElementsByClassName("pageheaderdiv1");
+	banner[0].appendChild(headerDiv);
+	headerDiv.appendChild(logoImg);
+	headerDiv.appendChild(sisText);
+	
 	// Fix the issue that causes multiple highlighted tabs
 	var tabon = document.getElementsByClassName("tabon");
-	var bgtabon = document.getElementsByClassName("bgtabon");
 	if (document.title == "Main Menu" || window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=amenu.P_AcctInfoMnu") {
 	    tabon[0].classList.add('taboff');
 	    tabon[0].classList.remove('tabon');
-	    bgtabon[0].classList.add('bgtaboff');
-	    bgtabon[0].classList.remove('bgtabon');
 	} else if (document.title == "Personal Information Menu" || document.title == "Student Menu") {
 	    tabon[1].classList.add('taboff');
 	    tabon[1].classList.remove('tabon');
-	    bgtabon[1].classList.add('bgtaboff');
-	    bgtabon[1].classList.remove('bgtabon');
 	}
-
+	
 }
