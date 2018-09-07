@@ -30,11 +30,6 @@ p {
     text-align: center;
 }
 
-.headerlinksdiv td td {
-	padding-top: 15px !important;
-	padding-bottom: 10px !important;
-}
-
 .headerwrapperdiv table {
 	border-top: 1px solid #8e8e8e !important;
 }
@@ -44,10 +39,14 @@ p {
 }
 
 td a {
+	display:inline-block;
+    width:100%;
 	color: #8e8e8e !important;
 	font-weight: 400;
 	font-size: 15px;
 	text-transform: uppercase;
+	padding-top: 15px !important;
+	padding-bottom: 12px !important;
 }
 
 .tabon {
