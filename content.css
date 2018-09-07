@@ -41,7 +41,6 @@ p {
 .headerlinksdiv td a {
 	display:inline-block;
     width:100%;
-	color: #8e8e8e !important;
 	font-weight: 400;
 	font-size: 15px;
 	text-transform: uppercase;
@@ -55,6 +54,10 @@ p {
 
 .tabon a {
 	color: #ffffff !important;
+}
+
+.taboff a {
+	color: #8e8e8e !important;
 }
 
 table tbody tr td table {
