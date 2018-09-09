@@ -178,10 +178,36 @@ if (window.location.href == "https://sis.rpi.edu/") {
 	
 	// Fix the issue that causes multiple highlighted tabs
 	var tabon = document.getElementsByClassName("tabon");
-	if (document.title == "Main Menu" || window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=amenu.P_AcctInfoMnu") {
+	if (document.title == "Main Menu" 
+					|| window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=amenu.P_AcctInfoMnu"
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskoacc.P_ViewAcct") {
 	    tabon[0].classList.add('taboff');
 	    tabon[0].classList.remove('tabon');
-	} else if (document.title == "Personal Information Menu" || document.title == "Student Menu") {
+	} else if (document.title == "Personal Information Menu" || document.title == "Student Menu" 
+					|| window.location.href == "https://sis.rpi.edu/rss/ywemernot.P_Main"
+					|| window.location.href == "https://sis.rpi.edu/rss/bwgkogad.P_SelectAtypUpdate" 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwgkoemr.P_SelectEmrgContacts"
+					|| window.location.href == "https://sis.rpi.edu/rss/bwgkvets.P_DispClass" 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskflib.P_SelDefTerm"
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskrsta.P_RegsStatusDisp" 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskfreg.P_AltPin"
+					|| window.location.href == "https://sis.rpi.edu/rss/ybwskfina.P_FinancialAgreement"
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskfreg.P_ChangeCrseOpt"
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskfcls.p_sel_crse_search" 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskfshd.P_CrseSchd" 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskfshd.P_CrseSchdDetl" 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskgstu.P_StuInfo" 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskogrd.P_ViewTermGrde" 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskotrn.P_ViewTermTran"
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskwtrr.p_disp_transcript_request_type"
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskwtrr.p_disp_status_of_order" 
+					|| window.location.href == "https://sis.rpi.edu/rss/hwskocap.P_StuSelectCompl" 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskgrad.p_disp_grad_term" 
+					|| window.location.href == "https://sis.rpi.edu/rss/hwskgrad.P_StuSelectTerm?menu_choice=B" 
+					|| window.location.href == "https://sis.rpi.edu/rss/hwskgrad.P_StuViewHolds" 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwcklibs.P_StoreTerm" 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskfreg.P_AddDropCrse" ) { 
+		// "Change Pin" and "Change Security Question" has no highlighted tab under "Personal Information"
 	    tabon[1].classList.add('taboff');
 	    tabon[1].classList.remove('tabon');
 	}
