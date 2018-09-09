@@ -1,7 +1,7 @@
 {
 	"name": "SIS Facelift",
 	"version": "1.0",
-	"description": "A Chrome extension that changes the superficial aspects of Rensselaer's Student Information System website.",
+	"description": "An extension that changes the superficial aspects of Rensselaer's Student Information System website.",
 
 	"content_scripts": [
 		{

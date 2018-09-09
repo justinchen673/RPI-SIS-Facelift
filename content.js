@@ -132,6 +132,10 @@ if (window.location.href == "https://sis.rpi.edu/") {
 	var body = document.body;
 	body.style.fontFamily = "Source Sans Pro, sans-serif";
 
+	/*
+	HEADER MODIFICATIONS
+	*/
+
 	// Unify the header across all the pages
 	var h1 = document.getElementsByTagName("h1");
 	h1[0].remove();
@@ -195,5 +199,15 @@ if (window.location.href == "https://sis.rpi.edu/") {
 		}
 	}
 	
-	
+	/*
+	SEARCH BAR MODIFICATIONS
+	*/
+	// Get rid of useless additional "main menu" hyperlink
+	var extraMenuLink = document.getElementById("ssbbackurl");
+	if (extraMenuLink != null) {
+		extraMenuLink.remove();
+	}
+
+	var form = document.getElementsByTagName("form");
+	form[0].value = "";
 }

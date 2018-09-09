@@ -63,3 +63,7 @@ p {
 table tbody tr td table {
 	width: 100%;
 }
+
+form {
+	font-family: "Source Sans Pro, sans-serif";
+}
