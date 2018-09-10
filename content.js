@@ -1,3 +1,14 @@
+//Used to color hover on main page refernces link list
+function coloringHandler() {
+    this.dataset.initialInlineColor = this.style.color;
+    this.style.color = '#990011';
+}
+
+function decoloringHandler() {
+    this.style.color = this.dataset.initialInlineColor;
+}
+
+
 if (window.location.href == "https://sis.rpi.edu/") {
 	// Initialize document body and global aspects
 	var body = document.body;
@@ -120,11 +131,15 @@ if (window.location.href == "https://sis.rpi.edu/") {
 	for (var i = 0; i < 8; i++) {
 		var li = document.createElement("li");
 		li.style.margin = "25px";
+        li.style.fontSize="20px";
 		var link = document.createElement("a");
 		link.href = referencesLinkList[i];
 		link.innerHTML = referencesList[i];
 		link.style.color = "white";
 		link.style.textDecoration = "none";
+        link.addEventListener('mouseover', coloringHandler);
+        link.addEventListener('mouseout', decoloringHandler);
+        li.style.listStyle="none";
 		li.appendChild(link);
 		ul.appendChild(li);
 	}
@@ -229,11 +244,23 @@ if (window.location.href == "https://sis.rpi.edu/") {
 	SEARCH BAR MODIFICATIONS
 	*/
 	// Get rid of useless additional "main menu" hyperlink
+    
 	var extraMenuLink = document.getElementById("ssbbackurl");
 	if (extraMenuLink != null) {
 		extraMenuLink.remove();
 	}
 
-	var form = document.getElementsByTagName("form");
-	form[0].value = "";
+    var form = document.getElementsByTagName("form");
+    
+    /*Add box shadows to search bar" */
+    var x =  document.getElementsByName("KEYWRD_IN") /*document.getElementsByClassName("fieldlabeltext");*/
+    var i;
+    for (i = 0; i < x.length; i++) {
+    x[i].style.boxShadow = "5px 5px 5px #999999";
+    } 
+    var inp = document.getElementsByTagName("input");
+    for (i = 0; i < inp.length; i++) {
+    inp[i].style.boxShadow = "5px 5px 5px #999999"; 
+    }
+    form[0].value = "";
 }
