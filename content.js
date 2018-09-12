@@ -223,9 +223,14 @@ if (window.location.href == "https://sis.rpi.edu/") {
 					|| window.location.href == "https://sis.rpi.edu/rss/bwcklibs.P_StoreTerm" 
 					|| window.location.href == "https://sis.rpi.edu/rss/bwskfreg.P_AddDropCrse"
 					|| window.location.href == "https://sis.rpi.edu/rss/bwckgens.p_proc_term_date" ) { 
-		// "Change Pin" and "Change Security Question" has no highlighted tab under "Personal Information"
 	    tabon[1].classList.add('taboff');
 	    tabon[1].classList.remove('tabon');
+	} else if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_ChangePin"
+					|| window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_SecurityQuestion") {
+		// "Change Pin" and "Change Security Question" has no highlighted tab, so we add a tabon
+		var taboff = document.getElementsByClassName("taboff");
+		taboff[0].classList.add('tabon');
+		taboff[0].classList.remove('taboff');
 	}
 
 	// Dynamic top buttons, change colors upon hover
