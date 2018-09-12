@@ -19,9 +19,8 @@ if (window.location.href == "https://sis.rpi.edu/") {
 	body.style.backgroundPosition = "center top";
 
 	// Eliminate the image of the SIS man
-	var sisMan = document.getElementsByTagName("img");
-	sisMan[0].remove();
-
+	document.getElementsByTagName("img")[0].remove();
+	
 	// Remove the tables on SIS
 	var tables = document.getElementsByTagName("table");
 	tables[1].remove();
@@ -151,13 +150,11 @@ if (window.location.href == "https://sis.rpi.edu/") {
 	HEADER MODIFICATIONS
 	*/
 
-	// Unify the header across all the pages
-	var h1 = document.getElementsByTagName("h1");
-	h1[0].remove();
+	// Get rid of left header title
+	document.getElementsByTagName("h1")[0].remove();
 
 	// Remove the paragraphs which cause white space
-	var paragraphs = document.getElementsByTagName("p");
-	paragraphs[0].remove();
+	document.getElementsByTagName("p")[0].remove();
 
 	// Remove all extra space between menu tabs
 	var menuBackgroundOn = document.getElementsByClassName("bgtabon");
@@ -186,8 +183,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
 	sisText.style.fontSize = "30px";
 	sisText.style.color = "#ffffff";
 
-	var banner = document.getElementsByClassName("pageheaderdiv1");
-	banner[0].appendChild(headerDiv);
+	document.getElementsByClassName("pageheaderdiv1")[0].appendChild(headerDiv);
 	headerDiv.appendChild(logoImg);
 	headerDiv.appendChild(sisText);
 	
@@ -260,18 +256,21 @@ if (window.location.href == "https://sis.rpi.edu/") {
     
     // Add box shadows to search bar
     var x =  document.getElementsByName("KEYWRD_IN") /*document.getElementsByClassName("fieldlabeltext");*/
-    var i;
-    for (i = 0; i < x.length; i++) {
+    for (var i = 0; i < x.length; i++) {
     	x[i].style.boxShadow = "1px 1px 1px #999999";
     } 
     var inp = document.getElementsByTagName("input");
-    for (i = 0; i < inp.length; i++) {
+    for (var i = 0; i < inp.length; i++) {
     	inp[i].style.boxShadow = "1px 1px 1px #999999"; 
     }
     form[0].value = "";
 
 
+    /*
+	BODY MODIFICATIONS
+    */
 
+    // Get rid of pagetitlediv, since it's repetitive and pointless
 
 
 
@@ -288,12 +287,10 @@ if (window.location.href == "https://sis.rpi.edu/") {
     }
 
     // Get rid of release statement
-    var release = document.getElementsByClassName("releasetext");
-    release[0].remove();
+    document.getElementsByClassName("releasetext")[0].remove();
 
     // Get rid of original copyright statement
-    var copyright = document.getElementsByClassName("banner_copyright");
-    copyright[0].remove();
+    document.getElementsByClassName("banner_copyright")[0].remove();
 
     // Redo the copyright statement in a custom footer
     var footer = document.createElement("footer");
