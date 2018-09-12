@@ -244,8 +244,8 @@ if (window.location.href == "https://sis.rpi.edu/") {
 	/*
 	SEARCH BAR MODIFICATIONS
 	*/
+
 	// Get rid of useless additional "main menu" hyperlink
-    
 	var extraMenuLink = document.getElementById("ssbbackurl");
 	if (extraMenuLink != null) {
 		extraMenuLink.remove();
@@ -253,15 +253,15 @@ if (window.location.href == "https://sis.rpi.edu/") {
 
     var form = document.getElementsByTagName("form");
     
-    /*Add box shadows to search bar" */
+    // Add box shadows to search bar
     var x =  document.getElementsByName("KEYWRD_IN") /*document.getElementsByClassName("fieldlabeltext");*/
     var i;
     for (i = 0; i < x.length; i++) {
-    x[i].style.boxShadow = "5px 5px 5px #999999";
+    	x[i].style.boxShadow = "1px 1px 1px #999999";
     } 
     var inp = document.getElementsByTagName("input");
     for (i = 0; i < inp.length; i++) {
-    inp[i].style.boxShadow = "5px 5px 5px #999999"; 
+    	inp[i].style.boxShadow = "1px 1px 1px #999999"; 
     }
     form[0].value = "";
 
