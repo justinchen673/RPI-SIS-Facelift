@@ -263,4 +263,39 @@ if (window.location.href == "https://sis.rpi.edu/") {
     inp[i].style.boxShadow = "5px 5px 5px #999999"; 
     }
     form[0].value = "";
+
+
+
+
+
+
+
+    /*
+    FOOTER MODIFICATIONS
+    */
+
+    // Get rid of pointless footer links
+    var footerLinks = document.getElementsByClassName("footerlinksdiv");
+    if (footerLinks.length != 0) {
+    	footerLinks[0].remove();
+    }
+
+    // Get rid of release statement
+    var release = document.getElementsByClassName("releasetext");
+    release[0].remove();
+
+    // Get rid of original copyright statement
+    var copyright = document.getElementsByClassName("banner_copyright");
+    copyright[0].remove();
+
+    // Redo the copyright statement in a custom footer
+    var footer = document.createElement("footer");
+    var footerDiv = document.createElement("div");
+    footerDiv.innerHTML = "© 2018 Ellucian Company L.P. and its affiliates.<br>SIS redesign by Justin Chen.";
+    footerDiv.style.textAlign = "center";
+    if (body.offsetHeight <= window.innerHeight) {
+        footer.style.position = "absolute";
+    }
+    footer.appendChild(footerDiv);
+    body.appendChild(footer);
 }

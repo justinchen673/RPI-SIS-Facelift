@@ -2,6 +2,14 @@ p {
 	margin: 0 !important;
 }
 
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+}
+
 .pageheaderdiv1 {
 	background-color: #D6001C !important;
 	background-image: none !important;
@@ -66,4 +74,21 @@ table tbody tr td table {
 
 form {
 	font-family: "Source Sans Pro, sans-serif";
+}
+
+.pagebodydiv {
+	overflow: auto;
+	padding-bottom: 100px;
+}
+
+
+
+
+footer {
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	background: #363636;
+	padding-top: 10px;
+	color: white;
 }
