@@ -221,7 +221,8 @@ if (window.location.href == "https://sis.rpi.edu/") {
 					|| window.location.href == "https://sis.rpi.edu/rss/hwskgrad.P_StuSelectTerm?menu_choice=B" 
 					|| window.location.href == "https://sis.rpi.edu/rss/hwskgrad.P_StuViewHolds" 
 					|| window.location.href == "https://sis.rpi.edu/rss/bwcklibs.P_StoreTerm" 
-					|| window.location.href == "https://sis.rpi.edu/rss/bwskfreg.P_AddDropCrse" ) { 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskfreg.P_AddDropCrse"
+					|| window.location.href == "https://sis.rpi.edu/rss/bwckgens.p_proc_term_date" ) { 
 		// "Change Pin" and "Change Security Question" has no highlighted tab under "Personal Information"
 	    tabon[1].classList.add('taboff');
 	    tabon[1].classList.remove('tabon');
@@ -276,7 +277,8 @@ if (window.location.href == "https://sis.rpi.edu/") {
 
     // Get rid of pointless footer links
     var footerLinks = document.getElementsByClassName("footerlinksdiv");
-    if (footerLinks.length != 0) {
+    var numLinks = footerLinks.length;
+    for (var i = 0; i < numLinks; i++) {
     	footerLinks[0].remove();
     }
 
