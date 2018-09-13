@@ -8,6 +8,32 @@ function decoloringHandler() {
     this.style.color = this.dataset.initialInlineColor;
 }
 
+function createRow(itemList, table) {
+    // Creation of second row
+    var row = document.createElement("tr");
+    for (var i = 0; i < 8; i++) {
+        var cell = document.createElement("td");
+        cell.classList.add("custommenucell");
+        if (i % 2 == 0) {
+            var icon = document.createElement("i");
+            icon.innerHTML = itemList[i];
+            icon.classList.add("material-icons");
+            cell.appendChild(icon);
+        } else {
+            var titleP = document.createElement("p");
+            titleP.classList.add("titleP");
+            titleP.innerHTML = itemList[i];
+            cell.appendChild(titleP);
+            var p2 = document.createElement("p");
+            p2.classList.add("supportText");
+            p2.innerHTML = "Filler text filler text yeet yeet yeet";
+            cell.appendChild(p2);
+        }
+        row.appendChild(cell);
+    }
+    table.appendChild(row);
+}
+
 
 if (window.location.href == "https://sis.rpi.edu/") {
 	// Initialize document body and global aspects
@@ -20,7 +46,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
 
 	// Eliminate the image of the SIS man
 	document.getElementsByTagName("img")[0].remove();
-	
+
 	// Remove the tables on SIS
 	var tables = document.getElementsByTagName("table");
 	tables[1].remove();
@@ -186,39 +212,39 @@ if (window.location.href == "https://sis.rpi.edu/") {
 	document.getElementsByClassName("pageheaderdiv1")[0].appendChild(headerDiv);
 	headerDiv.appendChild(logoImg);
 	headerDiv.appendChild(sisText);
-	
+
 	// Fix the issue that causes multiple highlighted tabs
 	var tabon = document.getElementsByClassName("tabon");
-	if (document.title == "Main Menu" 
+	if (document.title == "Main Menu"
 					|| window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=amenu.P_AcctInfoMnu"
 					|| window.location.href == "https://sis.rpi.edu/rss/bwskoacc.P_ViewAcct") {
 	    tabon[0].classList.add('taboff');
 	    tabon[0].classList.remove('tabon');
-	} else if (document.title == "Personal Information Menu" || document.title == "Student Menu" 
+	} else if (document.title == "Personal Information Menu" || document.title == "Student Menu"
 					|| window.location.href == "https://sis.rpi.edu/rss/ywemernot.P_Main"
-					|| window.location.href == "https://sis.rpi.edu/rss/bwgkogad.P_SelectAtypUpdate" 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwgkogad.P_SelectAtypUpdate"
 					|| window.location.href == "https://sis.rpi.edu/rss/bwgkoemr.P_SelectEmrgContacts"
-					|| window.location.href == "https://sis.rpi.edu/rss/bwgkvets.P_DispClass" 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwgkvets.P_DispClass"
 					|| window.location.href == "https://sis.rpi.edu/rss/bwskflib.P_SelDefTerm"
-					|| window.location.href == "https://sis.rpi.edu/rss/bwskrsta.P_RegsStatusDisp" 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskrsta.P_RegsStatusDisp"
 					|| window.location.href == "https://sis.rpi.edu/rss/bwskfreg.P_AltPin"
 					|| window.location.href == "https://sis.rpi.edu/rss/ybwskfina.P_FinancialAgreement"
 					|| window.location.href == "https://sis.rpi.edu/rss/bwskfreg.P_ChangeCrseOpt"
-					|| window.location.href == "https://sis.rpi.edu/rss/bwskfcls.p_sel_crse_search" 
-					|| window.location.href == "https://sis.rpi.edu/rss/bwskfshd.P_CrseSchd" 
-					|| window.location.href == "https://sis.rpi.edu/rss/bwskfshd.P_CrseSchdDetl" 
-					|| window.location.href == "https://sis.rpi.edu/rss/bwskgstu.P_StuInfo" 
-					|| window.location.href == "https://sis.rpi.edu/rss/bwskogrd.P_ViewTermGrde" 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskfcls.p_sel_crse_search"
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskfshd.P_CrseSchd"
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskfshd.P_CrseSchdDetl"
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskgstu.P_StuInfo"
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskogrd.P_ViewTermGrde"
 					|| window.location.href == "https://sis.rpi.edu/rss/bwskotrn.P_ViewTermTran"
 					|| window.location.href == "https://sis.rpi.edu/rss/bwskwtrr.p_disp_transcript_request_type"
-					|| window.location.href == "https://sis.rpi.edu/rss/bwskwtrr.p_disp_status_of_order" 
-					|| window.location.href == "https://sis.rpi.edu/rss/hwskocap.P_StuSelectCompl" 
-					|| window.location.href == "https://sis.rpi.edu/rss/bwskgrad.p_disp_grad_term" 
-					|| window.location.href == "https://sis.rpi.edu/rss/hwskgrad.P_StuSelectTerm?menu_choice=B" 
-					|| window.location.href == "https://sis.rpi.edu/rss/hwskgrad.P_StuViewHolds" 
-					|| window.location.href == "https://sis.rpi.edu/rss/bwcklibs.P_StoreTerm" 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskwtrr.p_disp_status_of_order"
+					|| window.location.href == "https://sis.rpi.edu/rss/hwskocap.P_StuSelectCompl"
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskgrad.p_disp_grad_term"
+					|| window.location.href == "https://sis.rpi.edu/rss/hwskgrad.P_StuSelectTerm?menu_choice=B"
+					|| window.location.href == "https://sis.rpi.edu/rss/hwskgrad.P_StuViewHolds"
+					|| window.location.href == "https://sis.rpi.edu/rss/bwcklibs.P_StoreTerm"
 					|| window.location.href == "https://sis.rpi.edu/rss/bwskfreg.P_AddDropCrse"
-					|| window.location.href == "https://sis.rpi.edu/rss/bwckgens.p_proc_term_date" ) { 
+					|| window.location.href == "https://sis.rpi.edu/rss/bwckgens.p_proc_term_date" ) {
 	    tabon[1].classList.add('taboff');
 	    tabon[1].classList.remove('tabon');
 	} else if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_ChangePin"
@@ -241,7 +267,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
 			this.classList.remove('taboff');
 		}
 	}
-	
+
 	/*
 	SEARCH BAR MODIFICATIONS
 	*/
@@ -253,15 +279,15 @@ if (window.location.href == "https://sis.rpi.edu/") {
 	}
 
     var form = document.getElementsByTagName("form");
-    
+
     // Add box shadows to search bar
     var x =  document.getElementsByName("KEYWRD_IN") /*document.getElementsByClassName("fieldlabeltext");*/
     for (var i = 0; i < x.length; i++) {
     	x[i].style.boxShadow = "1px 1px 1px #999999";
-    } 
+    }
     var inp = document.getElementsByTagName("input");
     for (var i = 0; i < inp.length; i++) {
-    	inp[i].style.boxShadow = "1px 1px 1px #999999"; 
+    	inp[i].style.boxShadow = "1px 1px 1px #999999";
     }
     form[0].value = "";
 
@@ -270,8 +296,35 @@ if (window.location.href == "https://sis.rpi.edu/") {
 	BODY MODIFICATIONS
     */
 
-    // Get rid of pagetitlediv, since it's repetitive and pointless
+    // Import the icons
+    var iconPack = document.createElement("link");
+    iconPack.href = "https://fonts.googleapis.com/icon?family=Material+Icons";
+    iconPack.rel = "stylesheet";
+    document.getElementsByTagName("head")[0].appendChild(iconPack);
 
+    // Get rid of the table that hold bulleted points
+    document.getElementsByClassName("menuplaintable")[0].remove();
+
+    // Student Menu table creation
+    if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu") {
+        // Get rid of repetitive title
+        document.getElementsByClassName("pagetitlediv")[0].remove();
+        // Create the title of the first block
+        var registrationInfoTitle = document.createElement("h1");
+        registrationInfoTitle.innerHTML = "Registration Information";
+        document.getElementsByClassName("pagebodydiv")[0].appendChild(registrationInfoTitle);
+
+    	var registrationInfo = document.createElement("table");
+        registrationInfo.classList.add("maincontenttable");
+        
+        var itemList = ["tune", "Select or Change Term", "ballot", "Check Registration Status", "add_circle_outline", "Register, Add, or Drop", "how_to_reg", "Financial Responsibility Agreement"];
+        var itemList2 = ["assignment", "Change Thesis/Project Credits", "youtube_searched_for", "Class Search", "calendar_view_day", "View Weekly Schedule, Day/Time Grid", "calendar_today", "View Weekly Schedule"];
+        createRow(itemList, registrationInfo);
+        createRow(itemList2, registrationInfo);
+
+    	document.getElementsByClassName("pagebodydiv")[0].appendChild(registrationInfo);
+
+    }
 
 
 
