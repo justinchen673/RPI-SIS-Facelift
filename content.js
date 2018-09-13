@@ -8,27 +8,34 @@ function decoloringHandler() {
     this.style.color = this.dataset.initialInlineColor;
 }
 
-function createRow(itemList, table) {
-    // Creation of second row
+function createRow(iconList, titleList, descriptionList, table) {
     var row = document.createElement("tr");
-    for (var i = 0; i < 8; i++) {
+    for (var i = 0; i < 4; i+=1) {
         var cell = document.createElement("td");
+        var bigCellDiv = document.createElement("div");
         cell.classList.add("custommenucell");
-        if (i % 2 == 0) {
-            var icon = document.createElement("i");
-            icon.innerHTML = itemList[i];
-            icon.classList.add("material-icons");
-            cell.appendChild(icon);
-        } else {
-            var titleP = document.createElement("p");
-            titleP.classList.add("titleP");
-            titleP.innerHTML = itemList[i];
-            cell.appendChild(titleP);
-            var p2 = document.createElement("p");
-            p2.classList.add("supportText");
-            p2.innerHTML = "Filler text filler text yeet yeet yeet";
-            cell.appendChild(p2);
-        }
+        var icon = document.createElement("i");
+        icon.innerHTML = iconList[i];
+        icon.classList.add("material-icons");
+        icon.style.float = "left";
+        icon.style.height = "100%";
+        bigCellDiv.appendChild(icon);
+        var cellDiv = document.createElement("div");
+        cellDiv.style.float = "left";
+        cellDiv.style.width = "250px";
+        var titleP = document.createElement("p");
+        titleP.classList.add("titleP");
+        titleP.innerHTML = titleList[i];
+        cellDiv.appendChild(titleP);
+        var p2 = document.createElement("p");
+        p2.classList.add("supportText");
+        p2.innerHTML = descriptionList[i];
+        cellDiv.appendChild(p2);
+        bigCellDiv.appendChild(cellDiv);
+        bigCellDiv.style.margin = "auto";
+        bigCellDiv.style.width = "298px";
+        cell.appendChild(bigCellDiv);
+
         row.appendChild(cell);
     }
     table.appendChild(row);
@@ -317,10 +324,20 @@ if (window.location.href == "https://sis.rpi.edu/") {
     	var table = document.createElement("table");
         table.classList.add("maincontenttable");
         // Create rows
-        var itemList = ["tune", "Select or Change Term", "ballot", "Check Registration Status", "add_circle_outline", "Register, Add, or Drop", "how_to_reg", "Financial Responsibility Agreement"];
-        createRow(itemList, table);
-        itemList = ["assignment", "Change Thesis/Project Credits", "youtube_searched_for", "Class Search", "calendar_view_day", "View Weekly Schedule, Day/Time Grid", "calendar_today", "View Weekly Schedule"];
-        createRow(itemList, table);
+        var iconList = ["tune", "ballot", "add_circle_outline", "how_to_reg"];
+        var titleList = ["Select or Change Term", "Check Registration Status", "Register, Add, or Drop", "Financial Responsibility Agreement"];
+        var descriptionList = ["Plan your courses or view past information by the semester.",
+                                "View time tickets, holds, SAM status, academic standing, anything that could prevent registration or restrict course selection.",
+                                "Add courses based on their CRNs or drop courses you're currently taking.",
+                                "Ensure you've met this agreement for each one of your semesters."];
+        createRow(iconList, titleList, descriptionList, table);
+        iconList = ["assignment", "youtube_searched_for", "calendar_view_day", "calendar_today"];
+        titleList = ["Change Thesis/Project Credits", "Class Search", "View Weekly Schedule, Day/Time Grid", "View Class Information"];
+        descriptionList = ["If you're engaged in a project, thesis, or dissertation, you can set or change the number of credits here.",
+                            "Search for classes by subject, credit range, part of term, course number, etc.",
+                            "View a grid that displays what classes you have per week at which times.",
+                            "View all the classes you're taking, along with the instructor, location, CRNs, and status."]
+        createRow(iconList, titleList, descriptionList, table);
     	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
 
         // Create the title of the second block
@@ -331,10 +348,37 @@ if (window.location.href == "https://sis.rpi.edu/") {
     	table = document.createElement("table");
         table.classList.add("maincontenttable");
         // Create rows
-        itemList = ["assignment_ind", "View Advisor and Curriculum Information", "assessment", "View Grades", "assignment_returned", "View Transcript", "assignment_late", "Request a Transcript"];
-        var itemList2 = ["assignment", "Change Thesis/Project Credits", "youtube_searched_for", "Class Search", "calendar_view_day", "View Weekly Schedule, Day/Time Grid", "calendar_today", "View Weekly Schedule"];
-        createRow(itemList, table);
-        createRow(itemList2, table);
+        iconList = ["assignment_ind", "assessment", "assignment_returned", "assignment_late"];
+        titleList = ["View Advisor and Curriculum Information", "View Grades", "View Transcript", "Request a Transcript"];
+        descriptionList = ["View various information regarding your status as a student, your advisor, and your major.",
+                            "See your grades from every semester. Grades in classes you are currently in won't be in here.",
+                            "An unofficial transcript that contains a history of every class you've taken.",
+                            "For mailing an official transcript to whomever it be necessary."]
+        createRow(iconList, titleList, descriptionList, table);
+        iconList = ["assignment_turned_in", "chrome_reader_mode", "class", "contact_support"];
+        titleList = ["View Advisor and Curriculum Information", "View Grades", "View Transcript", "Request a Transcript"];
+        descriptionList = ["This displays a history of your transcript requests by date of order.",
+                            "See your progression towards your major, regarding required courses and grades.",
+                            "An alternative to CAPP for viewing progression towards your major.",
+                            "A tutorial regarding how to use Degree Works."]
+        createRow(iconList, titleList, descriptionList, table);
+    	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
+
+        // Create the title of the third block
+        title = document.createElement("h1");
+        title.innerHTML = "Graduation Information";
+        document.getElementsByClassName("pagebodydiv")[0].appendChild(title);
+        // Create table itself
+    	table = document.createElement("table");
+        table.classList.add("maincontenttable");
+        // Create rows
+        iconList = ["school", "how_to_vote", "subtitles", "note"];
+        titleList = ["Commencement Ceremony Participation Policy", "Apply to Graduate", "View Degree Status and Diploma Information", "View Diploma Holds"];
+        descriptionList = ["This link is broken, as it is no longer accessible online and SIS never updates. Just be aware that it exists.",
+                            "Apply for your degree.",
+                            "If you've applied for a degree, that information can be viewed here.",
+                            "Double check to ensure there are no holds on your diploma."]
+        createRow(iconList, titleList, descriptionList, table);
     	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
     }
 

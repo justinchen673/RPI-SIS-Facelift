@@ -88,20 +88,22 @@ form {
 
 .material-icons {
 	font-size: 48px !important;
-	color: #474747;
+	color: #515151;
 }
 
 .titleP {
-	color: #474747 !important;
+	color: #515151 !important;
 	font-size: 24px;
+	font-weight: 700;
+	padding-bottom: 5px;
 }
 
 .supportText {
-	color: #474747 !important;
+	color: #515151 !important;
 }
 
 h1 {
-	color: #474747 !important;
+	color: #515151 !important;
 	font-weight: 1000 !important;
 }
 
