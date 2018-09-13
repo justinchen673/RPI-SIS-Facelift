@@ -83,6 +83,7 @@ form {
 
 .maincontenttable {
 	width: 100%;
+	table-layout: fixed;
 }
 
 .material-icons {

@@ -310,20 +310,32 @@ if (window.location.href == "https://sis.rpi.edu/") {
         // Get rid of repetitive title
         document.getElementsByClassName("pagetitlediv")[0].remove();
         // Create the title of the first block
-        var registrationInfoTitle = document.createElement("h1");
-        registrationInfoTitle.innerHTML = "Registration Information";
-        document.getElementsByClassName("pagebodydiv")[0].appendChild(registrationInfoTitle);
-
-    	var registrationInfo = document.createElement("table");
-        registrationInfo.classList.add("maincontenttable");
-        
+        var title = document.createElement("h1");
+        title.innerHTML = "Registration Information";
+        document.getElementsByClassName("pagebodydiv")[0].appendChild(title);
+        // Create table itself
+    	var table = document.createElement("table");
+        table.classList.add("maincontenttable");
+        // Create rows
         var itemList = ["tune", "Select or Change Term", "ballot", "Check Registration Status", "add_circle_outline", "Register, Add, or Drop", "how_to_reg", "Financial Responsibility Agreement"];
+        createRow(itemList, table);
+        itemList = ["assignment", "Change Thesis/Project Credits", "youtube_searched_for", "Class Search", "calendar_view_day", "View Weekly Schedule, Day/Time Grid", "calendar_today", "View Weekly Schedule"];
+        createRow(itemList, table);
+    	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
+
+        // Create the title of the second block
+        title = document.createElement("h1");
+        title.innerHTML = "Curriculum Information";
+        document.getElementsByClassName("pagebodydiv")[0].appendChild(title);
+        // Create table itself
+    	table = document.createElement("table");
+        table.classList.add("maincontenttable");
+        // Create rows
+        itemList = ["assignment_ind", "View Advisor and Curriculum Information", "assessment", "View Grades", "assignment_returned", "View Transcript", "assignment_late", "Request a Transcript"];
         var itemList2 = ["assignment", "Change Thesis/Project Credits", "youtube_searched_for", "Class Search", "calendar_view_day", "View Weekly Schedule, Day/Time Grid", "calendar_today", "View Weekly Schedule"];
-        createRow(itemList, registrationInfo);
-        createRow(itemList2, registrationInfo);
-
-    	document.getElementsByClassName("pagebodydiv")[0].appendChild(registrationInfo);
-
+        createRow(itemList, table);
+        createRow(itemList2, table);
+    	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
     }
 
 
