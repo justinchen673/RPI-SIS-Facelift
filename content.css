@@ -89,6 +89,7 @@ form {
 .material-icons {
 	font-size: 48px !important;
 	color: #515151;
+	padding-right: 5px;
 }
 
 .titleP {
