@@ -433,10 +433,32 @@ if (window.location.href == "https://sis.rpi.edu/") {
         createRow(iconList, titleList, linkList, descriptionList, table, 4);
         iconList = ["line_weight", "supervised_user_circle"];
         titleList = ["Award History", "Loan Application History"];
-        linkList = ["/rss/bwgkomar.P_SelectMtypUpdate", "/rss/bwgkvets.P_DispClass"];
+        linkList = ["/rss/bwrkrhst.P_DispAwdHst", "/rss/bwrklhst.P_DispLoanHst"];
         descriptionList = ["View how much financial aid you're receiving by the year.",
                             "View all accounts of applications for loans."];
         createRow(iconList, titleList, linkList, descriptionList, table, 2);
+    	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
+    }
+    if (document.title == "Main Menu") {
+        // Get rid of repetitive title
+        document.getElementsByClassName("pagetitlediv")[0].remove();
+        // Create table itself
+    	var table = document.createElement("table");
+        table.classList.add("maincontenttable");
+        // Create rows
+        var iconList = ["face", "account_circle", "directions_car", "local_atm"];
+        var titleList = ["Student Menu", "Personal Information", "Parking Main Menu", "Human Resources/Payroll Menu"];
+        var linkList = ["/rss/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu", "/rss/twbkwbis.P_GenMenu?name=bmenu.P_GenMnu", "/rss/bosscars.bosscars_home", "/rss/twbkwbis.P_GenMenu?name=pmenu.P_MainMnu"];
+        var descriptionList = ["Add and drop classes, view your schedule, look for classes, view grades, etc.",
+                                "Change your pin or security question, update your address or emergency contacts, etc.",
+                                "Apply for permits and view the disclaimer.",
+                                "See time sheets, tax forms, pay information, benefits and deductions, etc."];
+        createRow(iconList, titleList, linkList, descriptionList, table, 4);
+        iconList = ["attach_money"];
+        titleList = ["Financial Aid"];
+        linkList = ["/rss/twbkwbis.P_GenMenu?name=bmenu.P_FinAidMainMnu"];
+        descriptionList = ["See if you qualify for financial aid and view your aid per semester or per year."];
+        createRow(iconList, titleList, linkList, descriptionList, table, 1);
     	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
     }
 
