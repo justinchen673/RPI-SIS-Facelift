@@ -413,7 +413,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
         titleList = ["Update your Marital Status", "Veterans Classifications"];
         linkList = ["/rss/bwgkomar.P_SelectMtypUpdate", "/rss/bwgkvets.P_DispClass"];
         descriptionList = ["Here you can update your marital status within the system. This does NOT affect tax information or benefits.",
-                            ""];
+                            "RPI requires government contractors to take affirmative action to employ and advance in employment veterans."];
         createRow(iconList, titleList, linkList, descriptionList, table, 2);
     	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
     }
