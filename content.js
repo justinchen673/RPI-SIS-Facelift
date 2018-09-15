@@ -8,9 +8,9 @@ function decoloringHandler() {
     this.style.color = this.dataset.initialInlineColor;
 }
 
-function createRow(iconList, titleList, linkList, descriptionList, table) {
+function createRow(iconList, titleList, linkList, descriptionList, table, numBlocks) {
     var row = document.createElement("tr");
-    for (var i = 0; i < 4; i+=1) {
+    for (var i = 0; i < numBlocks; i+=1) {
         var cell = document.createElement("td");
         var bigCellDiv = document.createElement("div");
         cell.classList.add("custommenucell");
@@ -338,7 +338,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
                                 "View time tickets, holds, SAM status, academic standing, anything that could prevent registration or restrict course selection.",
                                 "Add courses based on their CRNs or drop courses you're currently taking.",
                                 "Ensure you've met this agreement for each one of your semesters."];
-        createRow(iconList, titleList, linkList, descriptionList, table);
+        createRow(iconList, titleList, linkList, descriptionList, table, 4);
         iconList = ["assignment", "youtube_searched_for", "calendar_view_day", "calendar_today"];
         titleList = ["Change Thesis/Project Credits", "Class Search", "View Weekly Schedule, Day/Time Grid", "View Class Information"];
         linkList = ["/rss/bwskfreg.P_ChangeCrseOpt", "/rss/bwskfcls.p_sel_crse_search", "/rss/bwskfshd.P_CrseSchd", "/rss/bwskfshd.P_CrseSchdDetl"];
@@ -346,7 +346,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
                             "Search for classes by subject, credit range, part of term, course number, etc.",
                             "View a grid that displays what classes you have per week at which times.",
                             "View all the classes you're taking, along with the instructor, location, CRNs, and status."]
-        createRow(iconList, titleList, linkList, descriptionList, table);
+        createRow(iconList, titleList, linkList, descriptionList, table, 4);
     	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
 
         // Create the title of the second block
@@ -364,7 +364,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
                             "See your grades from every semester. Grades in classes you are currently in won't be in here.",
                             "An unofficial transcript that contains a history of every class you've taken.",
                             "For mailing an official transcript to whomever it be necessary."]
-        createRow(iconList, titleList, linkList, descriptionList, table);
+        createRow(iconList, titleList, linkList, descriptionList, table, 4);
         iconList = ["assignment_turned_in", "chrome_reader_mode", "class", "contact_support"];
         titleList = ["Check Transcript Request Status", "View CAPP Reports", "Degree Works", "Degree Works Tutorials"];
         linkList = ["/rss/bwskwtrr.p_disp_status_of_order", "/rss/hwskocap.P_StuSelectCompl", "/rss/DW_Student.P_SignOn", "https://info.rpi.edu/degree-works"];
@@ -372,7 +372,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
                             "See your progression towards your major, regarding required courses and grades.",
                             "An alternative to CAPP for viewing progression towards your major.",
                             "A tutorial regarding how to use Degree Works."]
-        createRow(iconList, titleList, linkList, descriptionList, table);
+        createRow(iconList, titleList, linkList, descriptionList, table, 4);
     	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
 
         // Create the title of the third block
@@ -390,80 +390,34 @@ if (window.location.href == "https://sis.rpi.edu/") {
                             "Apply for your degree.",
                             "If you've applied for a degree, that information can be viewed here.",
                             "Double check to ensure there are no holds on your diploma."]
-        createRow(iconList, titleList, linkList, descriptionList, table);
+        createRow(iconList, titleList, linkList, descriptionList, table, 4);
     	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
-    } /*
-    if (window.location.href = "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=bmenu.P_GenMnu") {
+    }
+    if (document.title == "Personal Information Menu") {
 
         // Get rid of repetitive title
         document.getElementsByClassName("pagetitlediv")[0].remove();
-        // Create the title of the first block
-        var title = document.createElement("h1");
-        title.innerHTML = "Registration Information";
-        document.getElementsByClassName("pagebodydiv")[0].appendChild(title);
         // Create table itself
     	var table = document.createElement("table");
         table.classList.add("maincontenttable");
         // Create rows
-        var iconList = ["tune", "ballot", "add_circle_outline", "how_to_reg"];
-        var titleList = ["Select or Change Term", "Check Registration Status", "Register, Add, or Drop", "Financial Responsibility Agreement"];
-        var descriptionList = ["Plan your courses or view past information by the semester.",
-                                "View time tickets, holds, SAM status, academic standing, anything that could prevent registration or restrict course selection.",
-                                "Add courses based on their CRNs or drop courses you're currently taking.",
-                                "Ensure you've met this agreement for each one of your semesters."];
-        createRow(iconList, titleList, descriptionList, table);
-        iconList = ["assignment", "youtube_searched_for", "calendar_view_day", "calendar_today"];
-        titleList = ["Change Thesis/Project Credits", "Class Search", "View Weekly Schedule, Day/Time Grid", "View Class Information"];
-        descriptionList = ["If you're engaged in a project, thesis, or dissertation, you can set or change the number of credits here.",
-                            "Search for classes by subject, credit range, part of term, course number, etc.",
-                            "View a grid that displays what classes you have per week at which times.",
-                            "View all the classes you're taking, along with the instructor, location, CRNs, and status."]
-        createRow(iconList, titleList, descriptionList, table);
+        var iconList = ["lock", "security", "gps_fixed", "contact_phone"];
+        var titleList = ["Change PIN", "Change Security Question", "Update your Address", "Update your Emergency Contacts"];
+        var linkList = ["/rss/twbkwbis.P_ChangePin", "/rss/twbkwbis.P_SecurityQuestion", "/rss/bwgkogad.P_SelectAtypUpdate", "/rss/bwgkoemr.P_SelectEmrgContacts"];
+        var descriptionList = ["Change the password required to enter your accounut.",
+                                "Change the security question you use when you forget your password/PIN.",
+                                "This allows you to edit either your permanent address or your campus address.",
+                                "Add new emergency contacts and view the ones you already have."];
+        createRow(iconList, titleList, linkList, descriptionList, table, 4);
+        iconList = ["wc", "accessibility_new"];
+        titleList = ["Update your Marital Status", "Veterans Classifications"];
+        linkList = ["/rss/bwgkomar.P_SelectMtypUpdate", "/rss/bwgkvets.P_DispClass"];
+        descriptionList = ["Here you can update your marital status within the system. This does NOT affect tax information or benefits.",
+                            ""];
+        createRow(iconList, titleList, linkList, descriptionList, table, 2);
     	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
-
-        // Create the title of the second block
-        title = document.createElement("h1");
-        title.innerHTML = "Curriculum Information";
-        document.getElementsByClassName("pagebodydiv")[0].appendChild(title);
-        // Create table itself
-    	table = document.createElement("table");
-        table.classList.add("maincontenttable");
-        // Create rows
-        iconList = ["assignment_ind", "assessment", "assignment_returned", "assignment_late"];
-        titleList = ["View Advisor and Curriculum Information", "View Grades", "View Transcript", "Request a Transcript"];
-        descriptionList = ["View various information regarding your status as a student, your advisor, and your major.",
-                            "See your grades from every semester. Grades in classes you are currently in won't be in here.",
-                            "An unofficial transcript that contains a history of every class you've taken.",
-                            "For mailing an official transcript to whomever it be necessary."]
-        createRow(iconList, titleList, descriptionList, table);
-        iconList = ["assignment_turned_in", "chrome_reader_mode", "class", "contact_support"];
-        titleList = ["View Advisor and Curriculum Information", "View Grades", "View Transcript", "Request a Transcript"];
-        descriptionList = ["This displays a history of your transcript requests by date of order.",
-                            "See your progression towards your major, regarding required courses and grades.",
-                            "An alternative to CAPP for viewing progression towards your major.",
-                            "A tutorial regarding how to use Degree Works."]
-        createRow(iconList, titleList, descriptionList, table);
-    	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
-
-        // Create the title of the third block
-        title = document.createElement("h1");
-        title.innerHTML = "Graduation Information";
-        document.getElementsByClassName("pagebodydiv")[0].appendChild(title);
-        // Create table itself
-    	table = document.createElement("table");
-        table.classList.add("maincontenttable");
-        // Create rows
-        iconList = ["school", "how_to_vote", "subtitles", "note"];
-        titleList = ["Commencement Ceremony Participation Policy", "Apply to Graduate", "View Degree Status and Diploma Information", "View Diploma Holds"];
-        descriptionList = ["This link is broken, as it is no longer accessible online and SIS never updates. Just be aware that it exists.",
-                            "Apply for your degree.",
-                            "If you've applied for a degree, that information can be viewed here.",
-                            "Double check to ensure there are no holds on your diploma."]
-        createRow(iconList, titleList, descriptionList, table);
-    	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
-
     }
-    */
+
 
 
     /*
