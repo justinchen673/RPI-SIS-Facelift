@@ -317,12 +317,16 @@ if (window.location.href == "https://sis.rpi.edu/") {
     document.getElementsByTagName("head")[0].appendChild(iconPack);
 
     // Get rid of the table that hold bulleted points
-    document.getElementsByClassName("menuplaintable")[0].remove();
+    if (document.getElementsByClassName("menuplaintable")[0] != null) {
+        document.getElementsByClassName("menuplaintable")[0].remove();
+    }
+
+    if (document.getElementsByClassName("pagetitlediv")[0] != null) {
+        document.getElementsByClassName("pagetitlediv")[0].remove();
+    }
 
     // Student Menu table creation
     if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu") {
-        // Get rid of repetitive title
-        document.getElementsByClassName("pagetitlediv")[0].remove();
         // Create the title of the first block
         var title = document.createElement("h1");
         title.innerHTML = "Registration Information";
@@ -331,22 +335,21 @@ if (window.location.href == "https://sis.rpi.edu/") {
     	var table = document.createElement("table");
         table.classList.add("maincontenttable");
         // Create rows
-        var iconList = ["tune", "ballot", "add_circle_outline", "how_to_reg"];
-        var titleList = ["Select or Change Term", "Check Registration Status", "Register, Add, or Drop", "Financial Responsibility Agreement"];
-        var linkList = ["/rss/bwskflib.P_SelDefTerm", "/rss/bwskrsta.P_RegsStatusDisp", "/rss/bwskfreg.P_AltPin", "/rss/ybwskfina.P_FinancialAgreement"];
-        var descriptionList = ["Plan your courses or view past information by the semester.",
-                                "View time tickets, holds, SAM status, academic standing, anything that could prevent registration or restrict course selection.",
+        var iconList = ["ballot", "add_circle_outline", "how_to_reg", "assignment"];
+        var titleList = ["Check Registration Status", "Register, Add, or Drop", "Financial Responsibility Agreement", "Change Thesis/Project Credits"];
+        var linkList = ["/rss/bwskrsta.P_RegsStatusDisp", "/rss/bwskfreg.P_AltPin", "/rss/ybwskfina.P_FinancialAgreement", "/rss/bwskfreg.P_ChangeCrseOpt"];
+        var descriptionList = ["View time tickets, holds, SAM status, academic standing, anything that could prevent registration or restrict course selection.",
                                 "Add courses based on their CRNs or drop courses you're currently taking.",
-                                "Ensure you've met this agreement for each one of your semesters."];
+                                "Ensure you've met this agreement for each one of your semesters.",
+                                "If you're engaged in a project, thesis, or dissertation, you can set or change the number of credits here."];
         createRow(iconList, titleList, linkList, descriptionList, table, 4);
-        iconList = ["assignment", "youtube_searched_for", "calendar_view_day", "calendar_today"];
-        titleList = ["Change Thesis/Project Credits", "Class Search", "View Weekly Schedule, Day/Time Grid", "View Class Information"];
-        linkList = ["/rss/bwskfreg.P_ChangeCrseOpt", "/rss/bwskfcls.p_sel_crse_search", "/rss/bwskfshd.P_CrseSchd", "/rss/bwskfshd.P_CrseSchdDetl"];
-        descriptionList = ["If you're engaged in a project, thesis, or dissertation, you can set or change the number of credits here.",
-                            "Search for classes by subject, credit range, part of term, course number, etc.",
+        iconList = ["youtube_searched_for", "calendar_view_day", "calendar_today"];
+        titleList = ["Class Search", "View Weekly Schedule, Day/Time Grid", "View Class Information"];
+        linkList = ["/rss/bwskfcls.p_sel_crse_search", "/rss/bwskfshd.P_CrseSchd", "/rss/bwskfshd.P_CrseSchdDetl"];
+        descriptionList = ["Search for classes by subject, credit range, part of term, course number, etc.",
                             "View a grid that displays what classes you have per week at which times.",
                             "View all the classes you're taking, along with the instructor, location, CRNs, and status."]
-        createRow(iconList, titleList, linkList, descriptionList, table, 4);
+        createRow(iconList, titleList, linkList, descriptionList, table, 3);
     	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
 
         // Create the title of the second block
@@ -394,8 +397,6 @@ if (window.location.href == "https://sis.rpi.edu/") {
     	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
     }
     if (document.title == "Personal Information Menu") {
-        // Get rid of repetitive title
-        document.getElementsByClassName("pagetitlediv")[0].remove();
         // Create table itself
     	var table = document.createElement("table");
         table.classList.add("maincontenttable");
@@ -417,8 +418,6 @@ if (window.location.href == "https://sis.rpi.edu/") {
     	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
     }
     if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=bmenu.P_FinAidMainMnu") {
-        // Get rid of repetitive title
-        document.getElementsByClassName("pagetitlediv")[0].remove();
         // Create table itself
     	var table = document.createElement("table");
         table.classList.add("maincontenttable");
@@ -440,8 +439,6 @@ if (window.location.href == "https://sis.rpi.edu/") {
     	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
     }
     if (document.title == "Main Menu") {
-        // Get rid of repetitive title
-        document.getElementsByClassName("pagetitlediv")[0].remove();
         // Create table itself
     	var table = document.createElement("table");
         table.classList.add("maincontenttable");
@@ -462,8 +459,6 @@ if (window.location.href == "https://sis.rpi.edu/") {
     	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
     }
     if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=pmenu.P_MainMnu") {
-        // Get rid of repetitive title
-        document.getElementsByClassName("pagetitlediv")[0].remove();
         // Create table itself
     	var table = document.createElement("table");
         table.classList.add("maincontenttable");
@@ -485,8 +480,6 @@ if (window.location.href == "https://sis.rpi.edu/") {
     	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
     }
     if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=pmenu.P_TaxMenu") {
-        // We'll redo the title
-        document.getElementsByClassName("pagetitlediv")[0].remove();
         // Create a new title
         var title = document.createElement("h1");
         title.innerHTML = "Tax Forms";
@@ -511,8 +504,6 @@ if (window.location.href == "https://sis.rpi.edu/") {
     	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
     }
     if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=pmenu.P_PayMenu") {
-        // We'll redo the title
-        document.getElementsByClassName("pagetitlediv")[0].remove();
         // Create a new title
         var title = document.createElement("h1");
         title.innerHTML = "Pay Information";
@@ -531,8 +522,6 @@ if (window.location.href == "https://sis.rpi.edu/") {
         document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
     }
     if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=pmenu.P_BenMenu") {
-        // We'll redo the title
-        document.getElementsByClassName("pagetitlediv")[0].remove();
         // Create a new title
         var title = document.createElement("h1");
         title.innerHTML = "Benefits and Deductions";
@@ -552,8 +541,6 @@ if (window.location.href == "https://sis.rpi.edu/") {
         document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
     }
     if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=amenu.P_AcctInfoMnu") {
-        // Get rid of repetitive title
-        document.getElementsByClassName("pagetitlediv")[0].remove();
         // Create table itself
     	var table = document.createElement("table");
         table.classList.add("maincontenttable");
