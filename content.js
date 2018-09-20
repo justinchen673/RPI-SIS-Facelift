@@ -458,7 +458,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
         titleList = ["Financial Aid"];
         linkList = ["/rss/twbkwbis.P_GenMenu?name=bmenu.P_FinAidMainMnu"];
         descriptionList = ["See if you qualify for financial aid and view your aid per semester or per year."];
-        createRow(iconList, titleList, linkList, descriptionList, table, 1);settings
+        createRow(iconList, titleList, linkList, descriptionList, table, 1);
     	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
     }
     if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=pmenu.P_MainMnu") {
@@ -524,10 +524,45 @@ if (window.location.href == "https://sis.rpi.edu/") {
         var iconList = ["card_giftcard", "receipt", "money_off"];
         var titleList = ["Pay Stub", "Earnings History", "Deductions History"];
         var linkList = ["/rss/bwpkhstb.P_ChoosePayStubYear", "/rss/bwpkhpay.P_ChooseEarnings", "/rss/bwpkhded.P_ChooseDedn"];
-        var descriptionList = ["Your W-4 information determines the amount of Federal Tax that is withheld from your pay.",
-                                "Your State Tax Exemptions/Allowances information determines the amount of State Tax that is withheld from your pay.",
-                                "Form W-2 is used to report wages paid to employees and the taxes withheld from them."];
+        var descriptionList = ["View your pay stub detail including direct deposit information.",
+                                "View your earnings history by type and date range.",
+                                "View your deductions history by type and date range."];
         createRow(iconList, titleList, linkList, descriptionList, table, 3);
+        document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
+    }
+    if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=pmenu.P_BenMenu") {
+        // We'll redo the title
+        document.getElementsByClassName("pagetitlediv")[0].remove();
+        // Create a new title
+        var title = document.createElement("h1");
+        title.innerHTML = "Benefits and Deductions";
+        document.getElementsByClassName("pagebodydiv")[0].appendChild(title);
+        // Create table itself
+    	var table = document.createElement("table");
+        table.classList.add("maincontenttable");
+        // Create rows
+        var iconList = ["home", "local_hospital", "credit_card", "spa"];
+        var titleList = ["Retirement Plans", "Medical, Dental and Vision Benefit Information", "Flex Spending Accounts", "Additional Benefits"];
+        var linkList = ["/rss/bwpkdcmn.P_DispDednCurRet", "/rss/bwpkdcmn.P_DispDednCurHlt", "/rss/bwpkdcmn.P_DispDednCurFlxs", "/rss/bwpkdcmn.P_DispDednCurMisc"];
+        var descriptionList = ["View retirement information and link to retirement providers' websites.",
+                                "View medical, dental and vision information and link to providers' websites.",
+                                "View flexible spending accounts and link to the flexible spending administrator's website.",
+                                "View life insurance, disability and link to insurance providers' websites."];
+        createRow(iconList, titleList, linkList, descriptionList, table, 4);
+        document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
+    }
+    if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=amenu.P_AcctInfoMnu") {
+        // Get rid of repetitive title
+        document.getElementsByClassName("pagetitlediv")[0].remove();
+        // Create table itself
+    	var table = document.createElement("table");
+        table.classList.add("maincontenttable");
+        // Create rows
+        var iconList = ["assessment"];
+        var titleList = ["Account Summary By Semester"];
+        var linkList = ["/rss/bwskoacc.P_ViewAcct"];
+        var descriptionList = ["View a history of all of your charges and payments."];
+        createRow(iconList, titleList, linkList, descriptionList, table, 1);
         document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
     }
 
