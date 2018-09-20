@@ -509,7 +509,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
         descriptionList = ["By consenting to receive your W-2 electronically, you agree to return to this site between January 31st and April 15th each year to print your W-2 form online."];
         createRow(iconList, titleList, linkList, descriptionList, table, 1);
     	document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
-    }/*
+    }
     if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=pmenu.P_PayMenu") {
         // We'll redo the title
         document.getElementsByClassName("pagetitlediv")[0].remove();
@@ -521,14 +521,15 @@ if (window.location.href == "https://sis.rpi.edu/") {
     	var table = document.createElement("table");
         table.classList.add("maincontenttable");
         // Create rows
-        var iconList = ["account_balance", "account_balance_wallet", "assessment"];
-        var titleList = ["W-4 Federal Employee’s Withholding Allowance", "State Tax Exemptions/Allowances", "W-2c Corrected Wage and Tax Statement"];
-        var linkList = ["/rss/bwpkxtxs.P_ViewW4", "/rss/bwpkxtxs.P_ViewState", "/rss/bwpkxtxs.P_ChooseW2Key"];
+        var iconList = ["card_giftcard", "receipt", "money_off"];
+        var titleList = ["Pay Stub", "Earnings History", "Deductions History"];
+        var linkList = ["/rss/bwpkhstb.P_ChoosePayStubYear", "/rss/bwpkhpay.P_ChooseEarnings", "/rss/bwpkhded.P_ChooseDedn"];
         var descriptionList = ["Your W-4 information determines the amount of Federal Tax that is withheld from your pay.",
                                 "Your State Tax Exemptions/Allowances information determines the amount of State Tax that is withheld from your pay.",
                                 "Form W-2 is used to report wages paid to employees and the taxes withheld from them."];
         createRow(iconList, titleList, linkList, descriptionList, table, 3);
-    }*/
+        document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
+    }
 
 
 
