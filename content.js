@@ -573,6 +573,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
         headRow.appendChild(headCell);
         table.getElementsByTagName("tbody")[0].insertBefore(headRow, table.getElementsByTagName("tr")[0]);
 
+        // Edit lower table
     }
 
 
