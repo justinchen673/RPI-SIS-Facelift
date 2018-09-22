@@ -326,7 +326,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
     }
 
     // Student Menu table creation
-    if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu") {
+    if (document.title == "Student Menu") {
         // Create the title of the first block
         var title = document.createElement("h1");
         title.innerHTML = "Registration Information";
@@ -551,6 +551,28 @@ if (window.location.href == "https://sis.rpi.edu/") {
         var descriptionList = ["View a history of all of your charges and payments."];
         createRow(iconList, titleList, linkList, descriptionList, table, 1);
         document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
+    }
+    if (window.location.href == "https://sis.rpi.edu/rss/bwskfreg.P_AltPin") {
+        // We'll add the title to the table, so remove the default one
+        document.getElementsByTagName("h3")[0].remove();
+
+        // Adjustments to the paragraph above the table
+        document.getElementsByClassName("infotexttable")[1].remove();
+        document.getElementsByClassName("infotexttable")[0].innerHTML = "<BLOCKQUOTE><strong>Using this screen, you can add classes to your current schedule or drop a class from your current schedule. You can add classes in the Add Class section by entering in the desired class's Course Reference Number (CRN), or drop a class by using the options available in the action column of the Current Schedules table (some classes cannot be dropped!). When adds/drops are complete press the Submit Changes button. If you are unsure of which classes you wish to add press the Class Search button to review the class schedule.</strong></BLOCKQUOTE>";
+
+        // Adjustments to the table
+        var table = document.getElementsByClassName("datadisplaytable")[0];
+        // Make it fit the length of the screen
+        table.width = "100%";
+        // Add custom title to the table
+        var headRow = document.createElement("tr");
+        var headCell = document.createElement("td");
+        headCell.id = "tablehead";
+        headCell.colSpan = "10";
+        headCell.innerHTML = "Current Schedule";
+        headRow.appendChild(headCell);
+        table.getElementsByTagName("tbody")[0].insertBefore(headRow, table.getElementsByTagName("tr")[0]);
+
     }
 
 
