@@ -551,6 +551,11 @@ if (window.location.href == "https://sis.rpi.edu/") {
         document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
     }
     if (window.location.href == "https://sis.rpi.edu/rss/bwskfreg.P_AltPin") {
+        // Create page title
+        document.getElementsByClassName("pagebodydiv")[0].getElementsByTagName("br")[0].remove();
+        var title = document.createElement("h1");
+        title.innerHTML = "Register, Add, or Drop";
+        document.getElementsByClassName("pagebodydiv")[0].insertBefore(title, document.getElementsByTagName("form")[1]);
 
         // We'll add the title to the table, so remove the default one
         document.getElementsByTagName("h3")[0].remove();
