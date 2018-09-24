@@ -553,6 +553,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
         document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
     }
     if (window.location.href == "https://sis.rpi.edu/rss/bwskfreg.P_AltPin") {
+
         // We'll add the title to the table, so remove the default one
         document.getElementsByTagName("h3")[0].remove();
 
@@ -573,7 +574,14 @@ if (window.location.href == "https://sis.rpi.edu/") {
         headRow.appendChild(headCell);
         table.getElementsByTagName("tbody")[0].insertBefore(headRow, table.getElementsByTagName("tr")[0]);
 
-        // Edit lower table
+        // Edit credit hours table
+        document.getElementsByTagName("table")[5].classList.add("datadisplaytable");
+        document.getElementsByTagName("table")[5].classList.remove("plaintable");
+        creditHoursTable = document.getElementsByClassName("datadisplaytable");
+        for (var i = 0; i < 10; i++) {
+            creditHoursTable[1].getElementsByTagName("td")[i].classList.add("dddefault");
+            creditHoursTable[1].getElementsByTagName("td")[i].classList.remove("pldefault");
+        }
     }
 
 
