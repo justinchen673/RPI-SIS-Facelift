@@ -21,7 +21,8 @@
 				"benefitsAndDeductions.js",
 				"studentAccountDetailMenu.js",
 				"registerAddDrop.js",
-				"checkRegistrationStatus.js"
+				"checkRegistrationStatus.js",
+				"footer.js"
 			],
 			"css": [
 				"content.css"
