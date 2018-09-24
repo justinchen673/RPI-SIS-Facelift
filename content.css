@@ -171,6 +171,7 @@ h1 {
 .infotexttable {
 	font-size: 15pt;
 	padding-bottom: 20px;
+	font-family: "Source Sans Pro, sans-serif" !important;
 }
 
 footer {
