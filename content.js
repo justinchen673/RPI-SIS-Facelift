@@ -111,10 +111,8 @@ if (window.location.href == "https://sis.rpi.edu/") {
 	body.appendChild(leftHalfDiv);
 	// Set up the text that says "transformative"
 	var tText = document.createElement("h1");
-	tText.style.paddingTop = "60%";
-	tText.style.color = "#ffffff";
+    tText.id = "transformativetext";
 	tText.innerHTML = "TRANSFORMATIVE.";
-	tText.style.fontSize = "42px";
 	leftHalfDiv.appendChild(tText);
 	// Create and set up the login button
 	var loginButton = document.createElement("button");
