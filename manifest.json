@@ -10,7 +10,18 @@
 				"https://sis.rpi.edu/*"
 			],
 			"js": [
-				"content.js"
+				"content.js",
+				"personalInformationMenu.js",
+				"financialAidMenu.js",
+				"mainMenu.js",
+				"hrPayrollMenu.js",
+				"studentMenu.js",
+				"taxForms.js",
+				"payInformation.js",
+				"benefitsAndDeductions.js",
+				"studentAccountDetailMenu.js",
+				"registerAddDrop.js",
+				"checkRegistrationStatus.js"
 			],
 			"css": [
 				"content.css"
