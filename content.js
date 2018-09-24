@@ -580,6 +580,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
         // Edit credit hours table
         document.getElementsByTagName("table")[6].classList.add("datadisplaytable");
         document.getElementsByTagName("table")[6].classList.remove("dataentrytable");
+        // Change style of the cells
         crnTable = document.getElementsByClassName("datadisplaytable")[1];
         crnTable.getElementsByTagName("td")[0].classList.add("ddheader");
         crnTable.getElementsByTagName("td")[0].classList.remove("detitle");
@@ -588,6 +589,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
             crnTable.getElementsByTagName("td")[i].classList.remove("dedefault");
         }
         document.getElementsByTagName("h3")[0].remove();
+        // Add title to the table
         var headRow2 = document.createElement("tr");
         var headCell2 = document.createElement("td");
         headCell2.classList.add("tablehead");
@@ -595,8 +597,6 @@ if (window.location.href == "https://sis.rpi.edu/") {
         headCell2.innerHTML = "Add Classes Worksheet";
         headRow2.appendChild(headCell2);
         crnTable.getElementsByTagName("tbody")[0].insertBefore(headRow2, crnTable.getElementsByTagName("tr")[0]);
-
-
     }
 
 
