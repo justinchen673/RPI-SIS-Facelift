@@ -76,6 +76,15 @@ form {
 	font-family: "Source Sans Pro, sans-serif";
 }
 
+.pldefault {
+	font-family: "Source Sans Pro, sans-serif";
+	font-size: 14pt !important;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: 100 !important;
+}
+
 .pagebodydiv {
 	overflow: auto;
 	padding-bottom: 100px;
@@ -145,7 +154,7 @@ h1 {
 	padding-left: 6px;
 }
 
-#tablehead {
+.tablehead {
 	padding-left: 8px;
 	padding-bottom: 8px;
 	font-size: 20pt;

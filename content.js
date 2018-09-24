@@ -568,20 +568,32 @@ if (window.location.href == "https://sis.rpi.edu/") {
         // Add custom title to the table
         var headRow = document.createElement("tr");
         var headCell = document.createElement("td");
-        headCell.id = "tablehead";
+        headCell.classList.add("tablehead");
         headCell.colSpan = "10";
         headCell.innerHTML = "Current Schedule";
         headRow.appendChild(headCell);
         table.getElementsByTagName("tbody")[0].insertBefore(headRow, table.getElementsByTagName("tr")[0]);
 
         // Edit credit hours table
-        document.getElementsByTagName("table")[5].classList.add("datadisplaytable");
-        document.getElementsByTagName("table")[5].classList.remove("plaintable");
-        creditHoursTable = document.getElementsByClassName("datadisplaytable");
-        for (var i = 0; i < 10; i++) {
-            creditHoursTable[1].getElementsByTagName("td")[i].classList.add("dddefault");
-            creditHoursTable[1].getElementsByTagName("td")[i].classList.remove("pldefault");
+        document.getElementsByTagName("table")[6].classList.add("datadisplaytable");
+        document.getElementsByTagName("table")[6].classList.remove("dataentrytable");
+        crnTable = document.getElementsByClassName("datadisplaytable")[1];
+        crnTable.getElementsByTagName("td")[0].classList.add("ddheader");
+        crnTable.getElementsByTagName("td")[0].classList.remove("detitle");
+        for (var i = 1; i < 11; i++) {
+            crnTable.getElementsByTagName("td")[i].classList.add("dddefault");
+            crnTable.getElementsByTagName("td")[i].classList.remove("dedefault");
         }
+        document.getElementsByTagName("h3")[0].remove();
+        var headRow2 = document.createElement("tr");
+        var headCell2 = document.createElement("td");
+        headCell2.classList.add("tablehead");
+        headCell2.colSpan = "10";
+        headCell2.innerHTML = "Add Classes Worksheet";
+        headRow2.appendChild(headCell2);
+        crnTable.getElementsByTagName("tbody")[0].insertBefore(headRow2, crnTable.getElementsByTagName("tr")[0]);
+
+
     }
 
 
