@@ -4,6 +4,42 @@
 	font-size: 42px;
 }
 
+#banner {
+	height: 150px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background-color: #D6001C;
+	border-bottom: 10px solid #ffffff;
+}
+
+.sistext {
+	float: right;
+	font-size: 30px;
+	color: #ffffff;
+}
+
+.fancybtn {
+	background-color: #990011;
+	border: 3px solid #ffffff;
+	border-radius: 0;
+	color: #fff;
+	font-size: x-large;
+	padding-top: 70%;
+	position: absolute;
+	float: left;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+#referencestext {
+	font-weight: 600 !important;
+	color: #ffffff !important;
+	margin-left: 10px;
+}
+
 p {
 	margin: 0 !important;
 }

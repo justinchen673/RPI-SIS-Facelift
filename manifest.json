@@ -10,6 +10,8 @@
 				"https://sis.rpi.edu/*"
 			],
 			"js": [
+				"functionDump.js",
+				"landingPage.js",
 				"content.js",
 				"personalInformationMenu.js",
 				"financialAidMenu.js",
