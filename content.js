@@ -23,9 +23,7 @@ if (window.location.href != "https://sis.rpi.edu/") {
 
 	// Create and set up the div that the logo and right text will be in
 	var headerDiv = document.createElement("div");
-	headerDiv.style.marginLeft = "auto";
-	headerDiv.style.marginRight = "auto";
-	headerDiv.style.width = "75%";
+	headerDiv.classList.add("headerdiv");
 	// Create the logo image and the link to rpi.edu
 	var logoImg = document.createElement("img");
 	logoImg.src = "https://www.rpi.edu/dept/cct/apps/web-branding/v2/header/meganav/img/RPIlogo_white.png";

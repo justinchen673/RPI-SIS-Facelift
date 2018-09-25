@@ -47,3 +47,20 @@ function createRow(iconList, titleList, linkList, descriptionList, table, numBlo
     }
     table.appendChild(row);
 }
+
+// Add custom title to a table
+function addTableTitle(tableNum, colSpan, innerText) {
+    var table = document.getElementsByClassName("datadisplaytable")[tableNum];
+    // Remove caption if it exists
+    var tempCap = table.getElementsByClassName("captiontext")[0];
+    if (tempCap != null) {
+        tempCap.remove();
+    }
+    var headRow = document.createElement("tr");
+    var headCell = document.createElement("td");
+    headCell.classList.add("tablehead");
+    headCell.colSpan = colSpan;
+    headCell.innerHTML = innerText;
+    headRow.appendChild(headCell);
+    table.getElementsByTagName("tbody")[0].insertBefore(headRow, table.getElementsByTagName("tr")[0]);
+}

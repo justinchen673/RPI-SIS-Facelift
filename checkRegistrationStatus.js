@@ -11,22 +11,11 @@ if (window.location.href == "https://sis.rpi.edu/rss/bwskrsta.P_RegsStatusDisp")
     //Add some margin below first table
     document.getElementsByClassName("datadisplaytable")[0].style.marginBottom = "20px";
 
-    // Add custom title to the curriculum table
-    earnedCreditTable = document.getElementsByClassName("datadisplaytable")[1];
-    earnedCreditTable.getElementsByClassName("captiontext")[0].remove();
-    var headRow = document.createElement("tr");
-    var headCell = document.createElement("td");
-    headCell.classList.add("tablehead");
-    headCell.colSpan = "10";
-    headCell.innerHTML = "Earned Credit";
-    headRow.appendChild(headCell);
-    earnedCreditTable.getElementsByTagName("tbody")[0].insertBefore(headRow, earnedCreditTable.getElementsByTagName("tr")[0]);
-
     // Change style of the cells
-    curriculumTable = document.getElementsByClassName("datadisplaytable")[2];
+    var curriculumTable = document.getElementsByClassName("datadisplaytable")[2];
     curriculumTable.getElementsByTagName("th")[0].remove();
     curriculumTable.getElementsByClassName("captiontext")[0].remove();
-    curriculumCell = curriculumTable.getElementsByTagName("td");
+    var curriculumCell = curriculumTable.getElementsByTagName("td");
     curriculumCellHeader = curriculumTable.getElementsByTagName("th");
     curriculumCell[0].classList.add("ddheader");
     curriculumCell[0].classList.remove("dddefault");
@@ -36,13 +25,8 @@ if (window.location.href == "https://sis.rpi.edu/rss/bwskrsta.P_RegsStatusDisp")
         curriculumCellHeader[i].classList.remove("ddlabel");
     }
 
-    // Add custom title to the curriculum table
-    var headRow2 = document.createElement("tr");
-    var headCell2 = document.createElement("td");
-    headCell2.classList.add("tablehead");
-    headCell2.colSpan = "10";
-    headCell2.innerHTML = "Curriculum Information";
-    headRow2.appendChild(headCell2);
-    curriculumTable.getElementsByTagName("tr")[0].remove();
-    curriculumTable.getElementsByTagName("tbody")[0].insertBefore(headRow2, curriculumTable.getElementsByTagName("tr")[0]);
+    // Add titles to all tables
+    addTableTitle(0, "4", "Time Ticket for Registration");
+    addTableTitle(1, "3", "Earned Credit");
+    addTableTitle(2, "2", "Curriculum Information");
 }
