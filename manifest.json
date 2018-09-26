@@ -26,6 +26,7 @@
 				"checkRegistrationStatus.js",
 				"viewAdvisorCurriculum.js",
 				"changeThesis.js",
+				"viewGrades.js",
 				"footer.js"
 			],
 			"css": [
