@@ -1,9 +1,6 @@
 if (window.location.href == "https://sis.rpi.edu/rss/bwskgstu.P_StuInfo") {
     // Create page title
-    document.getElementsByClassName("pagebodydiv")[0].getElementsByTagName("br")[0].remove();
-    var title = document.createElement("h1");
-    title.innerHTML = "General Student Record";
-    document.getElementsByClassName("pagebodydiv")[0].insertBefore(title, document.getElementsByClassName("datadisplaytable")[0]);
+    createPageTitle("General Student Record", "datadisplaytable", 'c');
 
     var studentInfoTable = document.getElementsByClassName("datadisplaytable")[0];
     var studentInfoCellTH = studentInfoTable.getElementsByTagName("th");

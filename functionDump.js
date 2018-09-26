@@ -64,3 +64,25 @@ function addTableTitle(tableNum, colSpan, innerText) {
     headRow.appendChild(headCell);
     table.getElementsByTagName("tbody")[0].insertBefore(headRow, table.getElementsByTagName("tr")[0]);
 }
+
+// Creates page title
+function createPageTitle(titleText, childNode, classOrTag) {
+    document.getElementsByClassName("pagebodydiv")[0].getElementsByTagName("br")[0].remove();
+    var title = document.createElement("h1");
+    title.innerHTML = titleText;
+    if (classOrTag == 'c') {
+        document.getElementsByClassName("pagebodydiv")[0].insertBefore(title, document.getElementsByClassName(childNode)[0]);
+    } else {
+        document.getElementsByClassName("pagebodydiv")[0].insertBefore(title, document.getElementsByTagName(childNode)[1]);
+    }
+}
+
+// Replace classes of cells
+function addDefaultCell(oldClassName) {
+    var labelCells = document.getElementsByClassName(oldClassName);
+    var oldLength = labelCells.length;
+    for (var i = 0; i < oldLength; i++) {
+        labelCells[0].classList.add("dddefault");
+        labelCells[0].classList.remove(oldClassName);
+    }
+}
