@@ -60,6 +60,7 @@ if (window.location.href != "https://sis.rpi.edu/") {
 					|| window.location.href == "https://sis.rpi.edu/rss/bwskfshd.P_CrseSchdDetl"
 					|| window.location.href == "https://sis.rpi.edu/rss/bwskgstu.P_StuInfo"
 					|| window.location.href == "https://sis.rpi.edu/rss/bwskogrd.P_ViewTermGrde"
+					|| window.location.href == "https://sis.rpi.edu/rss/bwskogrd.P_ViewGrde"
 					|| window.location.href == "https://sis.rpi.edu/rss/bwskotrn.P_ViewTermTran"
 					|| window.location.href == "https://sis.rpi.edu/rss/bwskwtrr.p_disp_transcript_request_type"
 					|| window.location.href == "https://sis.rpi.edu/rss/bwskwtrr.p_disp_status_of_order"
