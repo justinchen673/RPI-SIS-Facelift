@@ -209,7 +209,7 @@ h1 {
 
 .tablehead {
 	padding-left: 8px;
-	padding-bottom: 8px;
+	padding-bottom: 8px !important;
 	font-size: 20pt;
 	background-color: #7f7f7f;
 	color: #ffffff;

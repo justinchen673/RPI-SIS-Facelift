@@ -24,8 +24,9 @@
 				"studentAccountDetailMenu.js",
 				"registerAddDrop.js",
 				"checkRegistrationStatus.js",
-				"footer.js",
-				"changeThesis.js"
+				"viewAdvisorCurriculum.js",
+				"changeThesis.js",
+				"footer.js"
 			],
 			"css": [
 				"content.css"
