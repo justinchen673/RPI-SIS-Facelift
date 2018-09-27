@@ -96,7 +96,7 @@ function addDefaultCellStyle(oldClassName) {
     for (var i = 0; i < oldLength; i++) {
         labelCells[0].classList.add("dddefault");
         labelCells[0].style.width = "25%";
-        labelCells[0].style.fontWeight = "400";
+        //labelCells[0].style.fontWeight = "400";
         labelCells[0].classList.remove(oldClassName);
     }
 }

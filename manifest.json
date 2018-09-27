@@ -30,6 +30,7 @@
 				"viewTranscript.js",
 				"summaryBySemester.js",
 				"timeSheet.js",
+				"view_w4.js",
 				"footer.js"
 			],
 			"css": [
