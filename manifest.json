@@ -27,6 +27,7 @@
 				"viewAdvisorCurriculum.js",
 				"changeThesis.js",
 				"viewGrades.js",
+				"viewTranscript.js",
 				"footer.js"
 			],
 			"css": [

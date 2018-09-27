@@ -67,7 +67,10 @@ function addTableTitle(tableNum, colSpan, innerText) {
 
 // Creates page title
 function createPageTitle(titleText, childNode, classOrTag) {
-    document.getElementsByClassName("pagebodydiv")[0].getElementsByTagName("br")[0].remove();
+    var tempBR = document.getElementsByClassName("pagebodydiv")[0].getElementsByTagName("br")[0];
+    if (tempBR != null) {
+        tempBR.remove();
+    }
     var title = document.createElement("h1");
     title.innerHTML = titleText;
     if (classOrTag == 'c') {
