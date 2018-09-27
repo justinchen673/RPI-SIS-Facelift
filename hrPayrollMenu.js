@@ -2,6 +2,9 @@ if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=pme
     // Create table itself
     var table = document.createElement("table");
     table.classList.add("maincontenttable");
+
+    document.getElementsByClassName("infotexttable")[0].innerHTML = "<BLOCKQUOTE><strong>The information provided on this site does not constitute an implied or expressed contract, guarantee or assurance of employment or any right to an employment-related benefit or procedure. The actual terms of the various employee benefit plans are stated in and governed by the formal plan documents.</strong></BLOCKQUOTE>";
+
     // Create rows
     var iconList = ["av_timer", "queue", "new_releases", "money_off"];
     var titleList = ["Time Sheet", "Tax Forms", "Pay Information", "Benefits and Deductions"];

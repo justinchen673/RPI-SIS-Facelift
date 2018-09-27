@@ -1,8 +1,6 @@
 if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=pmenu.P_BenMenu") {
     // Create a new title
-    var title = document.createElement("h1");
-    title.innerHTML = "Benefits and Deductions";
-    document.getElementsByClassName("pagebodydiv")[0].appendChild(title);
+    createPageTitle("Benefits and Deductions", "infotextdiv", 'f');
     // Create table itself
     var table = document.createElement("table");
     table.classList.add("maincontenttable");

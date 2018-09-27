@@ -1,8 +1,9 @@
 if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=pmenu.P_PayMenu") {
     // Create a new title
-    var title = document.createElement("h1");
-    title.innerHTML = "Pay Information";
-    document.getElementsByClassName("pagebodydiv")[0].appendChild(title);
+    createPageTitle("Pay Information", "infotextdiv", 'c');
+
+    document.getElementsByClassName("infotexttable")[0].innerHTML = "<BLOCKQUOTE><strong>NOTICE FOR DIRECT DEPOSITIRS:<br>There have been changes to the payment system rules for direct deposit of payroll. If you receive your payroll via direct deposit at a U.S. financial institution and then have the entire payroll amount forwarded to a financial institution in another country please advise the payroll department 276-6926. There are formatting requirements for these transactions that the company needs to follow. It will not impact your payroll.</strong></BLOCKQUOTE>";
+
     // Create table itself
     var table = document.createElement("table");
     table.classList.add("maincontenttable");
