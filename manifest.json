@@ -31,6 +31,7 @@
 				"summaryBySemester.js",
 				"timeSheet.js",
 				"view_w4.js",
+				"stateTaxExemptions.js",
 				"footer.js"
 			],
 			"css": [
