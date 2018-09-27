@@ -104,20 +104,7 @@ if (window.location.href != "https://sis.rpi.edu/") {
 	if (extraMenuLink != null) {
 		extraMenuLink.remove();
 	}
-
-    var form = document.getElementsByTagName("form");
-
-    // Add box shadows to search bar
-    var x =  document.getElementsByName("KEYWRD_IN") /*document.getElementsByClassName("fieldlabeltext");*/
-    for (var i = 0; i < x.length; i++) {
-    	x[i].style.boxShadow = "1px 1px 1px #999999";
-    }
-    var inp = document.getElementsByTagName("input");
-    for (var i = 0; i < inp.length; i++) {
-    	inp[i].style.boxShadow = "1px 1px 1px #999999";
-    }
-    form[0].value = "";
-
+	
     // Import the icons
     var iconPack = document.createElement("link");
     iconPack.href = "https://fonts.googleapis.com/icon?family=Material+Icons";
