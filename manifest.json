@@ -28,6 +28,7 @@
 				"changeThesis.js",
 				"viewGrades.js",
 				"viewTranscript.js",
+				"summaryBySemester.js",
 				"footer.js"
 			],
 			"css": [

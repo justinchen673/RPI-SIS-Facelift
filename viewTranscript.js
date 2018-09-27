@@ -38,6 +38,4 @@ if (window.location.href == "https://sis.rpi.edu/rss/bwskotrn.P_ViewTran") {
     document.getElementsByClassName("ddseparator")[1].remove();
     document.getElementsByClassName("ddseparator")[0].remove();
     document.getElementsByClassName("ddseparator")[1].innerHTML = "<BLOCKQUOTE><strong>This is NOT an official transcript. Courses which are in progress may also be included on this transcript.</strong></BLOCKQUOTE>";
-
-
 }
