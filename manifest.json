@@ -33,6 +33,7 @@
 				"view_w4.js",
 				"stateTaxExemptions.js",
 				"wageTheft.js",
+				"benefitsAndDeductionsPages.js",
 				"footer.js"
 			],
 			"css": [
