@@ -32,6 +32,7 @@
 				"timeSheet.js",
 				"view_w4.js",
 				"stateTaxExemptions.js",
+				"wageTheft.js",
 				"footer.js"
 			],
 			"css": [
