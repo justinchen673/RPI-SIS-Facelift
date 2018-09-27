@@ -29,6 +29,7 @@
 				"viewGrades.js",
 				"viewTranscript.js",
 				"summaryBySemester.js",
+				"timeSheet.js",
 				"footer.js"
 			],
 			"css": [
