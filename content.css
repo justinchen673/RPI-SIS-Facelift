@@ -230,3 +230,7 @@ footer {
 	color: white;
 	font-size: 13px;
 }
+
+.plaintable td {
+	color: #444444 !important;
+}
