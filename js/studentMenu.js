@@ -1,7 +1,7 @@
 // Student Menu table creation
 if (document.title == "Student Menu") {
     // Create the title of the first block
-    var title = document.createElement("h1");
+    var title = document.createElement("h2");
     title.innerHTML = "Registration Information";
     document.getElementsByClassName("pagebodydiv")[0].appendChild(title);
     // Create table itself
@@ -26,7 +26,7 @@ if (document.title == "Student Menu") {
     document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
 
     // Create the title of the second block
-    title = document.createElement("h1");
+    title = document.createElement("h2");
     title.innerHTML = "Curriculum Information";
     document.getElementsByClassName("pagebodydiv")[0].appendChild(title);
     // Create table itself
@@ -52,7 +52,7 @@ if (document.title == "Student Menu") {
     document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
 
     // Create the title of the third block
-    title = document.createElement("h1");
+    title = document.createElement("h2");
     title.innerHTML = "Graduation Information";
     document.getElementsByClassName("pagebodydiv")[0].appendChild(title);
     // Create table itself

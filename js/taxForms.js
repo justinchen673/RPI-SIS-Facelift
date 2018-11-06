@@ -1,6 +1,6 @@
 if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=pmenu.P_TaxMenu") {
     // Create a new title
-    var title = document.createElement("h1");
+    var title = document.createElement("h2");
     title.innerHTML = "Tax Forms";
     document.getElementsByClassName("pagebodydiv")[0].appendChild(title);
     // Create table itself

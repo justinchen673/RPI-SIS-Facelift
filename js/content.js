@@ -1,15 +1,6 @@
 if (window.location.href != "https://sis.rpi.edu/") {
-	var body = document.body;
-
-	/*
-	HEADER MODIFICATIONS
-	*/
-
-	// Get rid of left header title
-	document.getElementsByTagName("h1")[0].remove();
-
-	// Remove the paragraphs which cause white space
-	document.getElementsByTagName("p")[0].remove();
+	pageH1 = document.getElementsByTagName("h1")[0];
+    pageH1.innerHTML = "Rensselaer's Student Information System";
 
 	// Remove all extra space between menu tabs
 	var menuBackgroundOn = document.getElementsByClassName("bgtabon");
@@ -21,22 +12,15 @@ if (window.location.href != "https://sis.rpi.edu/") {
 		menuBackgroundOn[i].remove();
 	}
 
-	// Create and set up the div that the logo and right text will be in
-	var headerDiv = document.createElement("div");
-	headerDiv.classList.add("headerdiv");
 	// Create the logo image and the link to rpi.edu
 	var logoImg = document.createElement("img");
 	logoImg.src = "https://www.rpi.edu/dept/cct/apps/web-branding/v2/header/meganav/img/RPIlogo_white.png";
+    logoImg.id = "logoImg";
 	var logoLink = document.createElement("a");
 	logoLink.href = "https://rpi.edu";
-	// Text on the right
-	var sisText = document.createElement("div");
-    sisText.classList.add("sistext");
-	sisText.innerHTML = "Rensselaer's Student Information System";
 
-	document.getElementsByClassName("pageheaderdiv1")[0].appendChild(headerDiv);
-	headerDiv.appendChild(logoImg);
-	headerDiv.appendChild(sisText);
+	document.getElementsByClassName("pageheaderdiv1")[0].appendChild(logoImg);
+
 
 	// Fix the issue that causes multiple highlighted tabs
 	var tabon = document.getElementsByClassName("tabon");
@@ -104,7 +88,7 @@ if (window.location.href != "https://sis.rpi.edu/") {
 	if (extraMenuLink != null) {
 		extraMenuLink.remove();
 	}
-	
+
     // Import the icons
     var iconPack = document.createElement("link");
     iconPack.href = "https://fonts.googleapis.com/icon?family=Material+Icons";

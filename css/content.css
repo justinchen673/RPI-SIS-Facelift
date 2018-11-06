@@ -1,3 +1,7 @@
+/*
+Code for landing page
+*/
+
 #transformativetext {
 	padding-top: 60%;
 	color: #ffffff !important;
@@ -46,6 +50,10 @@
 	width: 75%;
 }
 
+/*
+General page adjustments
+*/
+
 p {
 	margin: 0 !important;
 }
@@ -57,6 +65,10 @@ html {
 body {
 	min-height: 100%;
 }
+
+/*
+Designing header
+*/
 
 .pageheaderdiv1 {
 	background-color: #D6001C !important;
@@ -103,6 +115,32 @@ body {
 	padding-top: 15px !important;
 	padding-bottom: 12px !important;
 }
+
+h1 {
+	width: 70%;
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 800 !important;
+	padding-left: 6%;
+}
+
+#logoImg {
+	padding-right: 7%;
+
+	-webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+            animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 
 .tabon {
 	background-color: #D6001C !important;
@@ -159,10 +197,11 @@ form {
 	color: #515151 !important;
 }
 
-h1 {
+h2 {
 	color: #515151 !important;
 	font-weight: 1000 !important;
 }
+
 
 .custommenucell {
 	padding-top: 15px;

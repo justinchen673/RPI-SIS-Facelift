@@ -71,7 +71,7 @@ function createPageTitle(titleText, childNode, classOrTag) {
     if (tempBR != null) {
         tempBR.remove();
     }
-    var title = document.createElement("h1");
+    var title = document.createElement("h2");
     title.innerHTML = titleText;
     if (classOrTag == 'c') {
         document.getElementsByClassName("pagebodydiv")[0].insertBefore(title, document.getElementsByClassName(childNode)[0]);

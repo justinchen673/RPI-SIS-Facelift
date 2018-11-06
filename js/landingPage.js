@@ -50,7 +50,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
 	leftHalfDiv.height = "100%";
 	body.appendChild(leftHalfDiv);
 	// Set up the text that says "transformative"
-	var tText = document.createElement("h1");
+	var tText = document.createElement("h2");
     tText.id = "transformativetext";
 	tText.innerHTML = "TRANSFORMATIVE.";
 	leftHalfDiv.appendChild(tText);
@@ -84,7 +84,7 @@ if (window.location.href == "https://sis.rpi.edu/") {
 	body.appendChild(div);
 
 	//Create and set up the header that goes inside the references div
-	var h1 = document.createElement("h1");
+	var h1 = document.createElement("h2");
     h1.id = "referencestext";
 	h1.innerHTML = "References";
 	div.appendChild(h1);
