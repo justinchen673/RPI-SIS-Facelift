@@ -162,7 +162,6 @@ table tbody tr td table {
 SEARCH BAR
 *******************************************************************************/
 
-
 form {
 	font-family: "Source Sans Pro", sans-serif;
 }
@@ -211,13 +210,24 @@ Edit tables in general
 	color: #515151 !important;
 }
 
-/*
-Page titles
-*/
+/*******************************************************************************
+MENUS
+*******************************************************************************/
 
+/* Menu title */
 h2 {
 	color: #515151 !important;
 	font-weight: 1000 !important;
+}
+/* Style the hyperlink for the images */
+.hyperLinkI {
+	float: left;
+	height: 100%;
+}
+
+/* Removes dots for "important information" bullets */
+.headerImg {
+	visibility: hidden;
 }
 
 .custommenucell {
@@ -225,11 +235,26 @@ h2 {
 	padding-bottom: 15px;
 }
 
+.cellDiv {
+	float: left;
+	width: 250px;
+}
+
+.bigCellDiv {
+	margin: auto;
+	width: 303px;
+}
+
 .ddheader {
 	background-color: #d7d7d7 !important;
 	font-family: "Source Sans Pro", sans-serif;
 	font-size: 15pt !important;
 	padding: 5px;
+}
+
+/* Honestly not too sure where this came from? */
+.captiontext {
+	visibility: hidden;
 }
 /*
 .datadisplaytable tr:nth-child(odd) {

@@ -4,6 +4,7 @@ if (window.location.href != "https://sis.rpi.edu/") {
 	pageH1 = document.getElementsByTagName("h1")[0];
     pageH1.innerHTML = "Rensselaer's Student Information System";
 
+	
 	// Remove all extra space between menu tabs
 	var menuBackgroundOn = document.getElementsByClassName("bgtabon");
 	var menuBackgroundOff = document.getElementsByClassName("bgtaboff");
@@ -13,6 +14,7 @@ if (window.location.href != "https://sis.rpi.edu/") {
 	for (var i = menuBackgroundOn.length - 1; i >= 0; i--) {
 		menuBackgroundOn[i].remove();
 	}
+
 
 	// Create the logo image and the link to rpi.edu
 	var logoImg = document.createElement("img");

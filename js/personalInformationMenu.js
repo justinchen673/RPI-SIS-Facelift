@@ -1,9 +1,4 @@
 if (document.title == "Personal Information Menu") {
-    // Edit "important info"
-    var headerImgs = document.getElementsByClassName("headerImg");
-    while (headerImgs[0] != null) {
-        headerImgs[0].remove();
-    }
     // Create table itself
     var table = document.createElement("table");
     table.classList.add("maincontenttable");

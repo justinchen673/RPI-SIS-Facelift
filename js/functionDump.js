@@ -13,19 +13,18 @@ function createRow(iconList, titleList, linkList, descriptionList, table, numBlo
     for (var i = 0; i < numBlocks; i+=1) {
         var cell = document.createElement("td");
         var bigCellDiv = document.createElement("div");
+        bigCellDiv.classList.add("bigCellDiv");
         cell.classList.add("custommenucell");
         var icon = document.createElement("i");
         var hyperLinkI = document.createElement("a");
         icon.innerHTML = iconList[i];
         icon.classList.add("material-icons");
         hyperLinkI.href = linkList[i];
-        hyperLinkI.style.float = "left";
-        hyperLinkI.style.height = "100%";
+        hyperLinkI.classList.add("hyperLinkI");
         hyperLinkI.appendChild(icon);
         bigCellDiv.appendChild(hyperLinkI);
         var cellDiv = document.createElement("div");
-        cellDiv.style.float = "left";
-        cellDiv.style.width = "250px";
+        cellDiv.classList.add("cellDiv");
         var titleP = document.createElement("p");
         var hyperLinkP = document.createElement("a");
         hyperLinkP.href = linkList[i];
@@ -39,8 +38,6 @@ function createRow(iconList, titleList, linkList, descriptionList, table, numBlo
         p2.innerHTML = descriptionList[i];
         cellDiv.appendChild(p2);
         bigCellDiv.appendChild(cellDiv);
-        bigCellDiv.style.margin = "auto";
-        bigCellDiv.style.width = "303px";
         cell.appendChild(bigCellDiv);
 
         row.appendChild(cell);
@@ -51,11 +48,7 @@ function createRow(iconList, titleList, linkList, descriptionList, table, numBlo
 // Add custom title to a table
 function addTableTitle(tableNum, colSpan, innerText) {
     var table = document.getElementsByClassName("datadisplaytable")[tableNum];
-    // Remove caption if it exists
-    var tempCap = table.getElementsByClassName("captiontext")[0];
-    if (tempCap != null) {
-        tempCap.remove();
-    }
+
     var headRow = document.createElement("tr");
     var headCell = document.createElement("td");
     headCell.classList.add("tablehead");
@@ -96,7 +89,6 @@ function addDefaultCellStyle(oldClassName) {
     for (var i = 0; i < oldLength; i++) {
         labelCells[0].classList.add("dddefault");
         labelCells[0].style.width = "25%";
-        //labelCells[0].style.fontWeight = "400";
         labelCells[0].classList.remove(oldClassName);
     }
 }
