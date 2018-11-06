@@ -1,4 +1,6 @@
 if (window.location.href != "https://sis.rpi.edu/") {
+	var body = document.body;
+
 	pageH1 = document.getElementsByTagName("h1")[0];
     pageH1.innerHTML = "Rensselaer's Student Information System";
 

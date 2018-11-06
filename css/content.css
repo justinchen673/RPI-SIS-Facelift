@@ -158,9 +158,17 @@ table tbody tr td table {
 	width: 100%;
 }
 
+/*
+For the search box
+*/
+
 form {
 	font-family: "Source Sans Pro", sans-serif;
 }
+
+/*
+Edit tables in general
+*/
 
 .pldefault {
 	font-size: 16pt !important;
@@ -197,11 +205,14 @@ form {
 	color: #515151 !important;
 }
 
+/*
+Page titles
+*/
+
 h2 {
 	color: #515151 !important;
 	font-weight: 1000 !important;
 }
-
 
 .custommenucell {
 	padding-top: 15px;

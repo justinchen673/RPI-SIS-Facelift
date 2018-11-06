@@ -16,13 +16,14 @@ if (document.title == "Student Menu") {
                             "Ensure you've met this agreement for each one of your semesters.",
                             "If you're engaged in a project, thesis, or dissertation, you can set or change the number of credits here."];
     createRow(iconList, titleList, linkList, descriptionList, table, 4);
-    iconList = ["youtube_searched_for", "calendar_view_day", "calendar_today"];
-    titleList = ["Class Search", "View Weekly Schedule, Day/Time Grid", "View Class Information"];
-    linkList = ["/rss/bwskfcls.p_sel_crse_search", "/rss/bwskfshd.P_CrseSchd", "/rss/bwskfshd.P_CrseSchdDetl"];
+    iconList = ["youtube_searched_for", "calendar_view_day", "calendar_today", "work"];
+    titleList = ["Class Search", "View Weekly Schedule, Day/Time Grid", "View Class Information", "Summer Arch"];
+    linkList = ["/rss/bwskfcls.p_sel_crse_search", "/rss/bwskfshd.P_CrseSchd", "/rss/bwskfshd.P_CrseSchdDetl", "/rss/YBWSKARCH.P_SummerArchForm"];
     descriptionList = ["Search for classes by subject, credit range, part of term, course number, etc.",
                         "View a grid that displays what classes you have per week at which times.",
-                        "View all the classes you're taking, along with the instructor, location, CRNs, and status."]
-    createRow(iconList, titleList, linkList, descriptionList, table, 3);
+                        "View all the classes you're taking, along with the instructor, location, CRNs, and status.",
+                        "Your personal information regarding the Arch. If you are not registered for the Arch, there won't be anything here."];
+    createRow(iconList, titleList, linkList, descriptionList, table, 4);
     document.getElementsByClassName("pagebodydiv")[0].appendChild(table);
 
     // Create the title of the second block
