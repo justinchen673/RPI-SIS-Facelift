@@ -1,21 +1,6 @@
 if (window.location.href != "https://sis.rpi.edu/") {
 	var body = document.body;
 
-	pageH1 = document.getElementsByTagName("h1")[0];
-    pageH1.innerHTML = "Rensselaer's Student Information System";
-
-	
-	// Remove all extra space between menu tabs
-	var menuBackgroundOn = document.getElementsByClassName("bgtabon");
-	var menuBackgroundOff = document.getElementsByClassName("bgtaboff");
-	for (var i = menuBackgroundOff.length - 1; i >= 0; i--) {
-		menuBackgroundOff[i].remove();
-	}
-	for (var i = menuBackgroundOn.length - 1; i >= 0; i--) {
-		menuBackgroundOn[i].remove();
-	}
-
-
 	// Create the logo image and the link to rpi.edu
 	var logoImg = document.createElement("img");
 	logoImg.src = "https://www.rpi.edu/dept/cct/apps/web-branding/v2/header/meganav/img/RPIlogo_white.png";
@@ -24,7 +9,6 @@ if (window.location.href != "https://sis.rpi.edu/") {
 	logoLink.href = "https://rpi.edu";
 
 	document.getElementsByClassName("pageheaderdiv1")[0].appendChild(logoImg);
-
 
 	// Fix the issue that causes multiple highlighted tabs
 	var tabon = document.getElementsByClassName("tabon");
@@ -92,13 +76,4 @@ if (window.location.href != "https://sis.rpi.edu/") {
     iconPack.href = "https://fonts.googleapis.com/icon?family=Material+Icons";
     iconPack.rel = "stylesheet";
     document.getElementsByTagName("head")[0].appendChild(iconPack);
-
-    // Get rid of the table that hold bulleted points
-    if (document.getElementsByClassName("menuplaintable")[0] != null) {
-        document.getElementsByClassName("menuplaintable")[0].remove();
-    }
-
-    if (document.getElementsByClassName("pagetitlediv")[0] != null) {
-        document.getElementsByClassName("pagetitlediv")[0].remove();
-    }
 }

@@ -1,11 +1,4 @@
 if (window.location.href != "https://sis.rpi.edu/") {
-    // Get rid of pointless footer links
-    var footerLinks = document.getElementsByClassName("footerlinksdiv");
-    var numLinks = footerLinks.length;
-    for (var i = 0; i < numLinks; i++) {
-        footerLinks[0].remove();
-    }
-
     // Redo the copyright statement in a custom footer
     var footer = document.createElement("footer");
     var footerDiv = document.createElement("div");

@@ -70,6 +70,14 @@ body {
 HEADER
 *******************************************************************************/
 
+.bgtabon {
+	display: none;
+}
+
+.bgtaboff {
+	display: none;
+}
+
 .pageheaderdiv1 {
 	background-color: #D6001C !important;
 	background-image: none !important;
@@ -140,10 +148,6 @@ h1 {
     to   { opacity: 1; }
 }
 
-#ssbbackurl {
-	visibility: hidden;
-}
-
 /* Styling the top tabs */
 .tabon {
 	background-color: #D6001C !important;
@@ -168,7 +172,7 @@ form {
 
 /* Hides useless "Main Menu" button */
 #ssbbackurl {
-	visibility: hidden;
+	display: none;
 }
 
 /*
@@ -214,6 +218,14 @@ Edit tables in general
 MENUS
 *******************************************************************************/
 
+/* Get rid of old menus */
+.menuplaintable {
+	display: none;
+}
+.pagetitlediv {
+	display: none;
+}
+
 /* Menu title */
 h2 {
 	color: #515151 !important;
@@ -227,7 +239,7 @@ h2 {
 
 /* Removes dots for "important information" bullets */
 .headerImg {
-	visibility: hidden;
+	display: none;
 }
 
 .custommenucell {
@@ -254,7 +266,7 @@ h2 {
 
 /* Honestly not too sure where this came from? */
 .captiontext {
-	visibility: hidden;
+	display: none;
 }
 /*
 .datadisplaytable tr:nth-child(odd) {
@@ -320,10 +332,15 @@ footer {
 	font-size: 13px;
 }
 
+/* Get rid of footer links */
+.footerlinksdiv {
+	display: none;
+}
+
 /* Get rid of original text */
 .releasetext {
-	visibility: hidden;
+	display: none;
 }
 .banner_copyright {
-	visibility: hidden;
+	display: none;
 }
