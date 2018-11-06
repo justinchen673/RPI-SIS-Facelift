@@ -6,12 +6,6 @@ if (window.location.href != "https://sis.rpi.edu/") {
         footerLinks[0].remove();
     }
 
-    // Get rid of release statement
-    document.getElementsByClassName("releasetext")[0].remove();
-
-    // Get rid of original copyright statement
-    document.getElementsByClassName("banner_copyright")[0].remove();
-
     // Redo the copyright statement in a custom footer
     var footer = document.createElement("footer");
     var footerDiv = document.createElement("div");
