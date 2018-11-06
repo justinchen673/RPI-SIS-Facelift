@@ -1,6 +1,6 @@
-/*
-Code for landing page
-*/
+/*******************************************************************************
+LANDING PAGE
+*******************************************************************************/
 
 #transformativetext {
 	padding-top: 60%;
@@ -50,9 +50,9 @@ Code for landing page
 	width: 75%;
 }
 
-/*
-General page adjustments
-*/
+/*******************************************************************************
+GENERAL PAGE ADJUSTMENTS
+*******************************************************************************/
 
 p {
 	margin: 0 !important;
@@ -66,9 +66,9 @@ body {
 	min-height: 100%;
 }
 
-/*
-Designing header
-*/
+/*******************************************************************************
+HEADER
+*******************************************************************************/
 
 .pageheaderdiv1 {
 	background-color: #D6001C !important;
@@ -116,6 +116,7 @@ Designing header
 	padding-bottom: 12px !important;
 }
 
+/* For the header text next to the image */
 h1 {
 	width: 70%;
 	font-family: "Source Sans Pro", sans-serif;
@@ -125,45 +126,50 @@ h1 {
 
 #logoImg {
 	padding-right: 7%;
-
-	-webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+	-webkit-animation: fadein 0.5s;
             animation: fadein 0.5s;
 }
 
+/* Get the logo to fade in */
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
-/* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
 
+#ssbbackurl {
+	visibility: hidden;
+}
 
+/* Styling the top tabs */
 .tabon {
 	background-color: #D6001C !important;
 }
-
 .tabon a {
 	color: #ffffff !important;
 }
-
 .taboff a {
 	color: #8e8e8e !important;
 }
-
 table tbody tr td table {
 	width: 100%;
 }
 
-/*
-For the search box
-*/
+/*******************************************************************************
+SEARCH BAR
+*******************************************************************************/
+
 
 form {
 	font-family: "Source Sans Pro", sans-serif;
+}
+
+/* Hides useless "Main Menu" button */
+#ssbbackurl {
+	visibility: hidden;
 }
 
 /*
@@ -271,6 +277,14 @@ h2 {
 	font-family: "Source Sans Pro", sans-serif;
 }
 
+.plaintable td {
+	color: #444444 !important;
+}
+
+/*******************************************************************************
+FOOTER
+*******************************************************************************/
+
 footer {
 	bottom: 0;
 	width: 100%;
@@ -281,6 +295,10 @@ footer {
 	font-size: 13px;
 }
 
-.plaintable td {
-	color: #444444 !important;
+/* Get rid of original text */
+.releasetext {
+	visibility: hidden;
+}
+.banner_copyright {
+	visibility: hidden;
 }

@@ -85,12 +85,6 @@ if (window.location.href != "https://sis.rpi.edu/") {
 	SEARCH BAR MODIFICATIONS
 	*/
 
-	// Get rid of useless additional "main menu" hyperlink
-	var extraMenuLink = document.getElementById("ssbbackurl");
-	if (extraMenuLink != null) {
-		extraMenuLink.remove();
-	}
-
     // Import the icons
     var iconPack = document.createElement("link");
     iconPack.href = "https://fonts.googleapis.com/icon?family=Material+Icons";
