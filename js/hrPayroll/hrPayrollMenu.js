@@ -3,7 +3,7 @@ if (window.location.href == "https://sis.rpi.edu/rss/twbkwbis.P_GenMenu?name=pme
     var table = document.createElement("table");
     table.classList.add("maincontenttable");
 
-    document.getElementsByClassName("infotexttable")[0].innerHTML = "<BLOCKQUOTE><strong>The information provided on this site does not constitute an implied or expressed contract, guarantee or assurance of employment or any right to an employment-related benefit or procedure. The actual terms of the various employee benefit plans are stated in and governed by the formal plan documents.</strong></BLOCKQUOTE>";
+    document.getElementsByClassName("infotexttable")[0].innerHTML = "The information provided on this site does not constitute an implied or expressed contract, guarantee or assurance of employment or any right to an employment-related benefit or procedure. The actual terms of the various employee benefit plans are stated in and governed by the formal plan documents.";
 
     // Create rows
     var iconList = ["av_timer", "queue", "new_releases", "money_off"];

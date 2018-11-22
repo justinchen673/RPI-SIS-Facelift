@@ -3,7 +3,7 @@ if (window.location.href == "https://sis.rpi.edu/rss/bwskfreg.P_ChangeCrseOpt") 
     createPageTitle("Update Project, Thesis or Dissertation Credits", "form", 't');
 
     // Adjustments to the paragraph above the table
-    document.getElementsByClassName("infotexttable")[0].innerHTML = "<BLOCKQUOTE><strong>If you have registered for a Project, Thesis or Dissertation Course and you would like to set/change the number of credits you can do so from this screen. Note: You can use the Menu button or the links at the bottom of this page to navigate to another page.</strong></BLOCKQUOTE>";
+    document.getElementsByClassName("infotexttable")[0].innerHTML = "If you have registered for a Project, Thesis or Dissertation Course and you would like to set/change the number of credits you can do so from this screen. Note: You can use the Menu button or the links at the bottom of this page to navigate to another page.";
 
     var tables = document.getElementsByClassName("dataentrytable");
     var initLength = tables.length;

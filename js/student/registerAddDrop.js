@@ -7,7 +7,7 @@ if (window.location.href == "https://sis.rpi.edu/rss/bwskfreg.P_AltPin") {
 
     // Adjustments to the paragraph above the table
     document.getElementsByClassName("infotexttable")[1].remove();
-    document.getElementsByClassName("infotexttable")[0].innerHTML = "<BLOCKQUOTE><strong>Using this screen, you can add classes to your current schedule or drop a class from your current schedule. You can add classes in the Add Class section by entering in the desired class's Course Reference Number (CRN), or drop a class by using the options available in the action column of the Current Schedules table (some classes cannot be dropped!). When adds/drops are complete press the Submit Changes button. If you are unsure of which classes you wish to add press the Class Search button to review the class schedule.</strong></BLOCKQUOTE>";
+    document.getElementsByClassName("infotexttable")[0].innerHTML = "Using this screen, you can add classes to your current schedule or drop a class from your current schedule. You can add classes in the Add Class section by entering in the desired class's Course Reference Number (CRN), or drop a class by using the options available in the action column of the Current Schedules table (some classes cannot be dropped!). When adds/drops are complete press the Submit Changes button. If you are unsure of which classes you wish to add press the Class Search button to review the class schedule.";
 
     // Edit credit hours table
     document.getElementsByTagName("table")[6].classList.add("datadisplaytable");
