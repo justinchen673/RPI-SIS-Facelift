@@ -190,7 +190,7 @@ Edit tables in general
 .pagebodydiv {
 	visibility: hidden;
 	overflow: auto;
-	padding-bottom: 100px;
+	padding-bottom: 50px;
 }
 
 .maincontenttable {
@@ -316,8 +316,15 @@ DISPLAY INFORMATION IN TABLE
 	padding-top: 20px;
 	padding-left: 40px;
 	padding-right: 40px;
-	font-weight: 800;
 	font-family: "Source Sans Pro", sans-serif;
+}
+
+.infotext {
+	font-weight: bold !important;
+}
+
+.captiontext {
+	display: none;
 }
 
 .plaintable td {

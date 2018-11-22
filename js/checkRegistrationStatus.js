@@ -2,9 +2,6 @@ if (window.location.href == "https://sis.rpi.edu/rss/bwskrsta.P_RegsStatusDisp")
     // Create page title
     createPageTitle("Check Registration Status", "infotextdiv", 'c');
 
-    // Adjustments to the paragraph above the table
-    document.getElementsByClassName("infotexttable")[0].style.visibility = "visible";
-
     // Change style of the cells
     var curriculumTable = document.getElementsByClassName("datadisplaytable")[2];
     curriculumTable.getElementsByTagName("th")[0].remove();
