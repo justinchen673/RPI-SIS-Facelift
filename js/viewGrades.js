@@ -3,7 +3,7 @@ if (window.location.href == "https://sis.rpi.edu/rss/bwskogrd.P_ViewGrde") {
     createPageTitle("Final Grades", "infotextdiv", 'c');
 
     // Adjustments to the paragraph above the table
-    document.getElementsByClassName("infotexttable")[0].innerHTML = "<BLOCKQUOTE><strong>For undergraduates who have repeated courses - Recalculation of GPAs to account for repeated courses will occur at the end of the term after grade processing for all students has been completed.</strong></BLOCKQUOTE>";
+    document.getElementsByClassName("infotexttable")[0].innerHTML = "For undergraduates who have repeated courses - Recalculation of GPAs to account for repeated courses will occur at the end of the term after grade processing for all students has been completed.";
 
     //Add some margin below first table
     document.getElementsByClassName("datadisplaytable")[0].style.marginBottom = "20px";

@@ -3,7 +3,7 @@ if (window.location.href == "https://sis.rpi.edu/rss/bwskotrn.P_ViewTran") {
     createPageTitle("Display Transcript", "infotextdiv", 'c');
 
     // Adjustments to the paragraph above the table
-    document.getElementsByClassName("infotexttable")[0].innerHTML = "<BLOCKQUOTE><strong>This is NOT an official transcript. Courses which are in progress may also be included on this transcript.</strong></BLOCKQUOTE>";
+    document.getElementsByClassName("infotexttable")[0].innerHTML = "This is NOT an official transcript. Courses which are in progress may also be included on this transcript.";
 
     addTableTitle(0, "12", "Transcript Data");
     addDefaultCell("ddlabel");

@@ -316,11 +316,8 @@ DISPLAY INFORMATION IN TABLE
 	padding-top: 20px;
 	padding-left: 40px;
 	padding-right: 40px;
-	font-family: "Source Sans Pro", sans-serif;
-}
-
-.infotext {
 	font-weight: bold !important;
+	font-family: "Source Sans Pro", sans-serif;
 }
 
 .captiontext {
