@@ -3,10 +3,7 @@ if (window.location.href == "https://sis.rpi.edu/rss/bwskrsta.P_RegsStatusDisp")
     createPageTitle("Check Registration Status", "infotextdiv", 'c');
 
     // Adjustments to the paragraph above the table
-    document.getElementsByClassName("infotexttable")[0].innerHTML = "<BLOCKQUOTE><strong>Displayed below are various items which may affect your registration. Your Time Ticket, Holds, Student Advisor Meeting (SAM) Status, Academic Standing, Student Status, Class, and Curriculum may prevent registration or restrict the courses you will be permitted to select. Incoming freshmen will be assigned a time ticket to permit registration during their assigned Student Orientation session.</strong></BLOCKQUOTE>";
-
-    //Add some margin below first table
-    document.getElementsByClassName("datadisplaytable")[0].style.marginBottom = "20px";
+    document.getElementsByClassName("infotexttable")[0].style.visibility = "visible";
 
     // Change style of the cells
     var curriculumTable = document.getElementsByClassName("datadisplaytable")[2];

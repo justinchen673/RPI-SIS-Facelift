@@ -1,4 +1,6 @@
 if (window.location.href != "https://sis.rpi.edu/") {
+    document.getElementsByClassName("pagebodydiv")[0].style.visibility = "visible";
+
     // Redo the copyright statement in a custom footer
     var footer = document.createElement("footer");
     var footerDiv = document.createElement("div");

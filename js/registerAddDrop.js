@@ -1,6 +1,6 @@
 if (window.location.href == "https://sis.rpi.edu/rss/bwskfreg.P_AltPin") {
     // Create page title
-    createPageTitle("Register, Add, or Drop", "form", 't');
+    createPageTitle("Register, Add, or Drop", "infotextdiv", 'c');
 
     // We'll add the title to the table, so remove the default one
     document.getElementsByTagName("h3")[0].remove();

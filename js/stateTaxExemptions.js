@@ -9,4 +9,9 @@ if (window.location.href == "https://sis.rpi.edu/rss/bwpkxtxs.P_ViewState") {
     addDefaultCellStyle("ddlabel");
 
     document.getElementsByClassName("pagefooterlinks")[0].remove();
+
+    var rightAligned = document.getElementsByClassName("rightaligntext");
+    for (var i = 0; i < 3; i++) {
+        rightAligned[1].classList.remove("rightaligntext");
+    }
 }

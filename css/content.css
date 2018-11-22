@@ -188,6 +188,7 @@ Edit tables in general
 }
 
 .pagebodydiv {
+	visibility: hidden;
 	overflow: auto;
 	padding-bottom: 100px;
 }
@@ -264,10 +265,10 @@ h2 {
 	padding: 5px;
 }
 
-/* Honestly not too sure where this came from? */
-.captiontext {
-	display: none;
-}
+/*******************************************************************************
+DISPLAY INFORMATION IN TABLE
+*******************************************************************************/
+
 /*
 .datadisplaytable tr:nth-child(odd) {
 	background-color: #d7d7d7;
@@ -287,6 +288,7 @@ h2 {
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
+	margin-bottom: 20px;
 }
 
 .datadisplaytable td {
@@ -311,6 +313,10 @@ h2 {
 .infotexttable {
 	font-size: 15pt;
 	padding-bottom: 20px;
+	padding-top: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
+	font-weight: 800;
 	font-family: "Source Sans Pro", sans-serif;
 }
 
