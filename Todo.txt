@@ -1,0 +1,10 @@
+If no access to certain page, mark it and still create a filler file for it.
+
+Fix multiple highlighted tabs from initial appearance
+
+Edit footer text
+
+Find out which pages are most used and really refine those
+    Register add and drop
+    View grades
+    View weekly schedule grid 
