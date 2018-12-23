@@ -1,14 +1,15 @@
 * - Not done
-+ - Finished
++ - Finished, but could be improved
+^ - Needs improvement
 % - Filler file
 
 * Personal Information
-    * Change Pin
-    * Change Security Question
-    * Update Address
-    * Update Emergency Contacts
-    * Update Marital Status
-    * Veterans Classifications
+    ^ Change Pin
+    ^ Change Security Question
+    ^ Update Address
+    ^ Update Emergency Contacts
+    ^ Update Marital Status
+    ^ Veterans Classifications
 
 * Student
     + Check Registration Status
@@ -58,4 +59,4 @@
         * Flex spending
         * Additional benefits
     * Leave balances
-    + Wage theft prevention 
+    + Wage theft prevention

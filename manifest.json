@@ -37,7 +37,13 @@
 				"js/footer.js",
 				"js/hrPayroll/viewW2.js",
 				"js/hrPayroll/viewW2c.js",
-				"js/student/financialResponsibility.js"
+				"js/student/financialResponsibility.js",
+				"js/personalInfo/changeQuestion.js",
+				"js/personalInfo/updateAddress.js",
+				"js/personalInfo/updateContacts.js",
+				"js/personalInfo/updateMaritalStatus.js",
+				"js/personalInfo/veteransClassification.js",
+				"js/personalInfo/changePin.js"
 			],
 			"css": [
 				"css/content.css"
