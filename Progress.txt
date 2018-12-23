@@ -1,0 +1,61 @@
+* - Not done
++ - Finished
+% - Filler file
+
+* Personal Information
+    * Change Pin
+    * Change Security Question
+    * Update Address
+    * Update Emergency Contacts
+    * Update Marital Status
+    * Veterans Classifications
+
+* Student
+    + Check Registration Status
+    + Register, Add, or Drop
+    % Financial Responsibility Agreement
+    + Change thesis / Project Credits
+    * Class search
+    * View weekly schedule
+    * View class information
+    * Summer arch
+    + View Advisor Curriculum
+    + View grades
+    + View Transcript
+    * Request transcript
+    * Check transcript request status
+    * View capp reports
+    * Apply to graduate
+    * View degree status
+    * View diploma holds
+
+* Financial Aid
+    * Eligibility and Requirements
+    * Award package by year
+    + Account summary by semester
+    * Award payment schedule for award year
+    * Award history
+    * Loan application history
+
++ Student Account Detail
+    + Account summary by semester
+
+* HR / Payroll
+    + Time Sheet
+    * Tax Forms
+        + W4 Withholding Allowance
+        + State tax exemptions
+        % W2 year end statement
+        % W-2c statement
+        * Electric W-2 Consent
+    * Pay information
+        * Pay Stub
+        * Earnings history
+        * Deductions history
+    * Benefits and Deductions
+        * Retirement Plans
+        * Medical, Dental, vision benefit information
+        * Flex spending
+        * Additional benefits
+    * Leave balances
+    + Wage theft prevention 

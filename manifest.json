@@ -34,7 +34,10 @@
 				"js/hrPayroll/stateTaxExemptions.js",
 				"js/hrPayroll/wageTheft.js",
 				"js/hrPayroll/benefitsAndDeductionsPages.js",
-				"js/footer.js"
+				"js/footer.js",
+				"js/hrPayroll/viewW2.js",
+				"js/hrPayroll/viewW2c.js",
+				"js/student/financialResponsibility.js"
 			],
 			"css": [
 				"css/content.css"

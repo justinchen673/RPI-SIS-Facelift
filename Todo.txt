@@ -4,7 +4,9 @@ Fix multiple highlighted tabs from initial appearance
 
 Edit footer text
 
+On registerAddDrop, creation of the page title is buggy
+
 Find out which pages are most used and really refine those
     Register add and drop
     View grades
-    View weekly schedule grid 
+    View weekly schedule grid

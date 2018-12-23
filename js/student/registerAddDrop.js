@@ -1,6 +1,7 @@
 if (window.location.href == "https://sis.rpi.edu/rss/bwskfreg.P_AltPin") {
-    // Create page title
-    createPageTitle("Register, Add, or Drop", "infotextdiv", 'c');
+    // Create page title, can't use createPageTitle function because there is an
+    // additional form on this page. My solution is buggy, this is to be
+    // completed eventually
 
     // We'll add the title to the table, so remove the default one
     document.getElementsByTagName("h3")[0].remove();
