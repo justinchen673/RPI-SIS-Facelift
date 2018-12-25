@@ -3,7 +3,7 @@
 ^ - Needs improvement
 % - Filler file
 
-* Personal Information
+^ Personal Information
     ^ Change Pin
     ^ Change Security Question
     ^ Update Address
@@ -16,7 +16,7 @@
     + Register, Add, or Drop
     % Financial Responsibility Agreement
     + Change thesis / Project Credits
-    * Class search
+    ^ Class search
     * View weekly schedule
     * View class information
     * Summer arch
@@ -31,12 +31,12 @@
     * View diploma holds
 
 * Financial Aid
-    * Eligibility and Requirements
-    * Award package by year
+    ^ Eligibility and Requirements (Tabbed UI)
+    * Award package by year (Tabbed UI)
     + Account summary by semester
-    * Award payment schedule for award year
-    * Award history
-    * Loan application history
+    + Award payment schedule for award year
+    + Award history
+    ^ Loan application history
 
 + Student Account Detail
     + Account summary by semester

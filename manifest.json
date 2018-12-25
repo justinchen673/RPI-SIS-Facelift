@@ -44,6 +44,10 @@
 				"js/personalInfo/updateMaritalStatus.js",
 				"js/personalInfo/veteransClassification.js",
 				"js/finAid/eligibilityAndRequirements.js",
+				"js/student/classSearch.js",
+				"js/finAid/awardPaymentSchedule.js",
+				"js/finAid/awardHistory.js",
+				"js/finAid/loanHistory.js",
 				"js/personalInfo/changePin.js"
 			],
 			"css": [
